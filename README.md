@@ -41,12 +41,12 @@ Here are the commands Organizers can do :
 Bot permissions are really minimal. It does not require any adminitration permissions. It will not view channels if you don't add it on it.
 
 [MANDATORY] : 
-- Read Messages : Bot needs to read its own message to be able to update them. This permission is only working on channel where the bot is added.
-- Embed Links : Bot is using discord Embed message. This is a cool feature from discord that allow Bot to create fancy and beautiful messages.
-- Read Message History : Bot needs to read its own message to be able to update them. This permission is only working on channel where the bot is added.
+- Read Messages : Bot needs to read its own messages.
+- Embed Links : Bot is using discord Embed message to create beautiful messages.
+- Read Message History : Bot needs to read its own messages.
+- Send Messages : When initizalied, Bot needs to send the general status message. Then it needs to send notification messages. 
 
 [OPTIONAL] : 
-- Send Messages : When initializing, Bot needs to send the general status message. Then if notification are enabled, it will send notification messages. 
 - Mention everyone, here and roles. 
 
 ## How can I get it ? 
