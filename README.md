@@ -5,8 +5,10 @@ Hello, I'm Fenix, I've been playing on Seren for 8 years. I've made the observat
 ## What does the bot do ?
 
 - Update overall battleground status: 
+
 ![alt text](https://images-ext-2.discordapp.net/external/evBp1F3Qf4pSxuLv6lTOmTPJgZFzDwKnZyl-2wOkdxc/https/i.ibb.co/m9F3YZp/fenix-status.png)
 - Make a notification when battlegrounds start popping: 
+
 ![alt text](https://images-ext-2.discordapp.net/external/bvf0sCmZBv53_AYe31c-9RLvK0RDKQGxByNOZYdg-V4/https/i.ibb.co/fDTFs4M/fenix-notifs.png)
 
 ## How does the bot work ? 
