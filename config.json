@@ -1,11 +1,11 @@
 {
-  "prefix": "!",
-  "UTC": 2,
-  "sleepStartTime": 1,
-  "sleepEndTime": 10,
-  "allowedRoles": ["Organizer", "Mod", "Admin", "Co-Admin"],
-  "corsairAliases": ["corsair", "cs", "coco", "corsair-stronghold"],
-  "shoreAliases": ["shore", "sh", "shore-hold"],
-  "gridironAliases": ["gridiron", "gridi", "battle arena", "gr"],
-  "skyringAliases": ["skyring", "champion-skyring", "3v3", "3s", "3c3", "3vs3", "sky"]
+	"prefix": "!",
+	"UTC": 2,
+	"sleepStartTime": 1,
+	"sleepEndTime": 10,
+	"allowedRoles": ["Organizer", "Mod", "Admin", "Co-Admin"],
+	"corsairAliases": ["corsair", "cs", "coco", "corsair-stronghold"],
+	"shoreAliases": ["shore", "sh", "shore-hold"],
+	"gridironAliases": ["gridiron", "gridi", "battle arena", "gr"],
+	"skyringAliases": ["skyring", "champion-skyring", "3v3", "3s", "3c3", "3vs3", "sky"]
 }

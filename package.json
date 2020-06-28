@@ -1,23 +1,23 @@
 {
-  "name": "bot-fenix-dev",
-  "version": "3.0.1",
-  "description": "Fenix Bot for Tera PvP announcement.",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "discord.js": "^12.2.0",
-    "mongoose": "^5.9.19"
-  },
-  "engines": {
-    "node": "12.x"
-  },
-  "license": "MIT",
-  "keywords": [
-    "discord",
-    "glitch",
-    "bot"
-  ]
+	"name": "bot-fenix-dev",
+	"version": "3.0.1",
+	"description": "Fenix Bot for Tera PvP announcement.",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^4.17.1",
+		"discord.js": "^12.2.0",
+		"mongoose": "^5.9.19"
+	},
+	"engines": {
+		"node": "12.x"
+	},
+	"license": "MIT",
+	"keywords": [
+		"discord",
+		"glitch",
+		"bot"
+	]
 }

@@ -33,7 +33,7 @@ Here are the commands Administrators can do :
 
 Here are the commands Organizers can do : 
 
-- `!pop bgName` :  To manually trigger Battleground notifications and Battleground status update for all servers.
+- `!pop bgName` : To manually trigger Battleground notifications and Battleground status update for all servers.
 - `!cancel bgName` : To manually remove Battleground notifications for all servers.
 
 ## What are the bot permissions ?
@@ -55,7 +55,6 @@ Bot permissions are really minimal. It does not require any adminitration permis
 - Once the bot is added, you will see it in the list member of your discord.
 - Add bot permissions to the channel (Read Messages, Send Messages, Embed Links, Read Message History, Mention everyone).
 - Use the command `!init #channel` (in a channel where the bot can read you).
-
 
 
 
