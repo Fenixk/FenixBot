@@ -8,7 +8,7 @@ const removeAllNotification = (client, bgType) => {
 			let channels = guild.channels.cache.filter((channel) => { return (channel.id === res.channelId); }).array();
 			if (channels && channels.length > 0) {
 				channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition;}); 
-				removeNotification(channels[0], bgType, res.guildName, res.language);
+				removeNotification(channels[0], bgType, res.guildName);
 			}
 			else return;
 		})

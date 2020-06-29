@@ -1,7 +1,6 @@
 const createEmbedCompact = require('../functions/createEmbedCompact.js');
-const statusDescriptors = require('../constants/status-descriptors');
 
-const updateStatus = (channel, status, guild, language) => {
+const updateStatus = (channel, status, guild) => {
 	let botMessages;
 	let exist = false;
 	channel.messages.fetch({ limit: 100 }).then(messages => {
@@ -9,8 +8,8 @@ const updateStatus = (channel, status, guild, language) => {
 		if (botMessages.array().length > 0){
 			// Find the good Embed with status recap.
 			for (let i=0; i < botMessages.array().length; i++){
-				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].url === statusDescriptors.url) {
-					const statusEmbed = createEmbedCompact(status, language);
+				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === 'Battleground Activity'){
+					const statusEmbed = createEmbedCompact(status);
 					console.log('Update Embed for ' + guild);
 					botMessages.array()[i].edit(statusEmbed).then().catch(err => console.log('Failed to edit Embed for updateStatus in ' + guild));
 					exist = true;
@@ -20,7 +19,7 @@ const updateStatus = (channel, status, guild, language) => {
 		
 		// If status Embed does not exist, create it
 		if (!exist) {
-			const statusEmbed = createEmbedCompact(status, language);
+			const statusEmbed = createEmbedCompact(status)
 			channel.send(statusEmbed).then().catch(err => console.log('Failed to create Embed for updateStatus in ' + guild));
 		}
 		return null;
