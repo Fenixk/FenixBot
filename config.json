@@ -1,6 +1,6 @@
 {
 	"prefix": "!",
-	"UTC": 2,
+	"UTC": { "en": 1, "fr": 2, "de": 2, "ru": 3 },
 	"sleepStartTime": 1,
 	"sleepEndTime": 10,
 	"allowedRoles": ["Organizer", "Mod", "Admin", "Co-Admin"],

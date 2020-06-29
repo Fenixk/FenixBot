@@ -1,7 +1,6 @@
 const updateStatus = require("../functions/updateStatus.js");
 const Status = require("../schemas/Status.schema.js");
 const Guilds = require('../schemas/Guilds.schema.js');
-const { UTC } = require("../config.json");
 
 const updateAllStatus = (client, bgType, statusType) => {
 	// First Update Database.
@@ -25,11 +24,8 @@ const updateAllStatus = (client, bgType, statusType) => {
 };
 
 function getNowDate() {
-	const currentTime = new Date(Date.now() + UTC * 3600000);
-	const time = '**' + currentTime.getHours() + 'h' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes() + '** (UTC+' + UTC + ')';
-	const date = 'on ' + currentTime.getDate() + '/' + currentTime.getMonth() + '/' + currentTime.getFullYear();
-	const timeString = time + ' ' + date;
-	return timeString;
+	const currentTime = new Date(Date.now());
+	return currentTime;
 }
 
 module.exports = updateAllStatus;
