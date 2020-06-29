@@ -3,16 +3,16 @@ const colors = require('../constants/colors');
 const { UTC } = require('../config.json');
 const Discord = require('discord.js');
 
-const createEmbed = (bgType, status) => {
-	const currentTime = new Date(Date.now() + UTC * 3600000);
-	const timeString = '**' + currentTime.getHours() + 'h' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes() + '** (UTC+' + UTC + ')';
+const createEmbed = (bgType, status, language) => {
+	const timeString = translateDate(Date.now(), language);
 	const bg = bgDescriptors[bgType];
+	const bgLang = bgDescriptors[language][bgType];
 	
 	const Embed = new Discord.MessageEmbed()
 		.setColor(colors[status])
-		.setTitle(bg.title)
+		.setTitle(bgLang.title)
 		.setURL('https://discord.gg/UTuDSMk')
-		.setDescription(bg.description[status])
+		.setDescription(bgLang.description[status])
 		.setThumbnail(bg.image)
 		.addFields(
 			{ name: 'Status', value: ':' + status + '_circle:', inline: true },
@@ -20,9 +20,23 @@ const createEmbed = (bgType, status) => {
 			{ name: 'Players', value: bg.players[status], inline: true },
 		)
 		.setTimestamp(new Date())
-		.setFooter(bg.footer, '');
+		.setFooter(bgLang.footer, '');
 
 	return Embed;
 };
+
+function translateDate(timestamp, language) {
+	if (parseInt(timestamp,10) === 0) {
+		return 'Not registred yet';
+	}
+	const UTCtime = UTC[language];
+	const currentTime = new Date(parseInt(timestamp,10) + UTCtime * 3600000);
+	const time = '**' + currentTime.getHours() + 'h' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes() + '**';
+	const date = ' - ' + currentTime.getDate() + '/' + currentTime.getMonth() + '/' + currentTime.getFullYear();
+	const timeString = time + (language === "en" ? ' (UTC+2)' : '') + date;
+
+	return timeString;
+}
+
 
 module.exports = createEmbed;

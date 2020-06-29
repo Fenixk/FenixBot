@@ -1,11 +1,15 @@
 {
 	"prefix": "!",
-	"UTC": 2,
+	"UTC": { "en": 2, "fr": 2, "de": 2, "ru": 3 },
 	"sleepStartTime": 1,
 	"sleepEndTime": 10,
 	"allowedRoles": ["Organizer", "Mod", "Admin", "Co-Admin"],
 	"corsairAliases": ["corsair", "cs", "coco", "corsair-stronghold"],
 	"shoreAliases": ["shore", "sh", "shore-hold"],
 	"gridironAliases": ["gridiron", "gridi", "battle arena", "gr"],
-	"skyringAliases": ["skyring", "champion-skyring", "3v3", "3s", "3c3", "3vs3", "sky"]
+	"skyringAliases": ["skyring", "champion-skyring", "3v3", "3s", "3c3", "3vs3", "sky"],
+	"frenchAliases": ["fr", "french", "français", "francais", "france"],
+	"englishAliases": ["en", "english", "us", "usa", "american", "england", "british"],
+	"russianAliases": ["ru", "russian", "russia", "русский", "Россия"],
+	"germanAliases": ["de", "deutsch", "german", "gr", "germany"]
 }
