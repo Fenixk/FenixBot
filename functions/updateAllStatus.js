@@ -6,7 +6,7 @@ const updateAllStatus = (client, bgType, statusType) => {
 	// First Update Database.
 	Status.findOne({ id: "1" }).then(status => {
 		status[bgType] = statusType;
-		if (statusType === "green") status[`last${bgType}`] = getNowDate();
+		if (statusType === "green") status[`last${bgType}`] = Date.now();
 		console.log('Updating status ' + statusType);
 		Status.findOneAndUpdate({ _id: status._id }, status).then(new_status => {
 			client.guilds.cache.forEach(guild => {
@@ -22,10 +22,5 @@ const updateAllStatus = (client, bgType, statusType) => {
 		});
 	});
 };
-
-function getNowDate() {
-	const currentTime = new Date(Date.now());
-	return currentTime;
-}
 
 module.exports = updateAllStatus;
