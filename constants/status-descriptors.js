@@ -29,7 +29,7 @@ const statusDescriptors = {
 	ru: {
 		title: 'Активность баттлграундов',
 		url: 'https://discord.gg/UTuDSMk',
-		description: 'Какие батлграунды в момент активны? Присоединяйся к битве ⚔️',
+		description: 'Какие баттлграунды в данным момент активны? ⚔️ !',
 		footer: 'баттлграунд ориентирована на командные пвп бои.',
 		battleground: 'Баттлграунд',
 		status: 'Статус',
