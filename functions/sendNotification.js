@@ -14,7 +14,9 @@ const sendNotification = (channel, bgType, guild, language) => {
 			// Find the good Embed.
 			for (let i=0; i < botMessages.array().length; i++){
 				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === bgDescriptors[language][bgType].title) {
-					botMessages.array()[i].edit(announceEmbed).then().catch(err => console.log('Failed to edit embed for SEND NOTIFICATION in ' + guild));
+					botMessages.array()[i].edit(announceEmbed)
+					.then(res => console.log('Send Notification for ' + guild))
+					.catch(err => console.log('Failed to edit embed for SEND NOTIFICATION in ' + guild));
 					exist = true;
 				}
 				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === 'Battleground Activity'){
