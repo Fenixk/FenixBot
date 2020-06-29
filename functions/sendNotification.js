@@ -13,7 +13,7 @@ const sendNotification = (channel, bgType, guild, language) => {
 		if (botMessages.array().length > 0){
 			// Find the good Embed.
 			for (let i=0; i < botMessages.array().length; i++){
-				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === bgDescriptors[language][bgType].title) {
+				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].url === bgDescriptors.url) {
 					botMessages.array()[i].edit(announceEmbed).then().catch(err => console.log('Failed to edit embed for SEND NOTIFICATION in ' + guild));
 					exist = true;
 				}

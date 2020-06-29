@@ -1,6 +1,7 @@
 const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE } = require('./battleground-types.js');
 
 const bgDescriptor = {
+	url: 'https://discord.gg/UTuDSMk',
 	[CORSAIR_TYPE]: {
 		image: "https://cdn.glitch.com/cbdc508c-c599-4570-a02a-93ea04cd50ac%2Fcorsair.jpg?v=1592260774851",
 		players: {

@@ -9,7 +9,7 @@ const updateStatus = (channel, status, guild, language) => {
 		if (botMessages.array().length > 0){
 			// Find the good Embed with status recap.
 			for (let i=0; i < botMessages.array().length; i++){
-				if (botMessages.array()[i].embeds[0] && (botMessages.array()[i].embeds[0].title === statusDescriptors.en.title || botMessages.array()[i].embeds[0].title === statusDescriptors[language].title)) {
+				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].url === statusDescriptors.url) {
 					const statusEmbed = createEmbedCompact(status, language);
 					console.log('Update Embed for ' + guild);
 					botMessages.array()[i].edit(statusEmbed).then().catch(err => console.log('Failed to edit Embed for updateStatus in ' + guild));
