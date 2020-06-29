@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'help',
-	description: 'Test embed for a specific battlegrounds.',
+	description: 'Send in author PM the list of commands.',
 	aliases: ['help', 'fenix'],
 	execute(client, message) {
 		const helpMessage =

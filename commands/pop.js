@@ -5,7 +5,7 @@ const { UTC } = require('../config.json');
 
 module.exports = {
 	name: 'pop',
-	description: 'Test embed for a specific battlegrounds.',
+	description: 'Create notifications for BGs and update status to green.',
 	guildOnly: true,
 	roleOnly: true,
 	adminOnly: false,

@@ -2,7 +2,7 @@ const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE } = require('../co
 
 module.exports = {
 	name: 'detect',
-	description: 'Test embed for a specific battlegrounds.',
+	description: 'Trigger the BGs automatic detection and send result to the author.',
 	guildOnly: true,
 	roleOnly: true,
 	adminOnly: false,

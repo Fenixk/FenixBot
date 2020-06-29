@@ -3,7 +3,7 @@ const removeAllNotifications = require('../functions/removeAllNotifications.js')
 
 module.exports = {
 	name: 'cancel',
-	description: 'Test embed for a specific battlegrounds.',
+	description: 'Cancel notifications for BGs and update status to red.',
 	guildOnly: true,
 	roleOnly: true,
 	adminOnly: false,
