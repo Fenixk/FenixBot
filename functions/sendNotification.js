@@ -22,7 +22,11 @@ const sendNotification = (channel, bgType, guild, language) => {
 					.catch(err => console.log('Failed to edit embed for SEND NOTIFICATION in ' + guild));
 					exist = true;
 				}
-				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === statusDescriptors[language].title){
+				if (botMessages.array()[i].embeds[0] && (
+					botMessages.array()[i].embeds[0].title === statusDescriptors.fr.title || 
+					botMessages.array()[i].embeds[0].title === statusDescriptors.en.title || 
+					botMessages.array()[i].embeds[0].title === statusDescriptors.ru.title || 
+					botMessages.array()[i].embeds[0].title === statusDescriptors.de.title )) {
 					statusExist = true;
 				}
 			}
