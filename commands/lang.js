@@ -32,7 +32,7 @@ module.exports = {
 				if (channels && channels.length > 0) {
 					channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition; });
 					Status.findOne({ id: "1" }).then(status => {
-						updateStatus(channels[0], status, res.guildName, res.language);
+						updateStatus(channels[0], status, res.guildName, 'en');
 					});
 				}
 			}).catch(err => console.log(err.message));
@@ -51,7 +51,7 @@ module.exports = {
 				if (channels && channels.length > 0) {
 					channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition; });
 					Status.findOne({ id: "1" }).then(status => {
-						updateStatus(channels[0], status, res.guildName, res.language);
+						updateStatus(channels[0], status, res.guildName, 'fr');
 					});
 				}
 			}).catch(err => console.log(err.message));
