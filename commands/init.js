@@ -37,7 +37,7 @@ module.exports = {
 		Guilds.findOneAndUpdate({ guildId: message.guild.id }, data, { upsert : true }).then().catch(err => console.log(err.message));
 
 		Status.findOne({ id: "1" }).then(status => {
-			const statusEmbed = createEmbedCompact(status);
+			const statusEmbed = createEmbedCompact(status, 'en');
 			channel.send(statusEmbed).then(res => message.author.send(initMessage)).catch(err => message.reply("I can't send message to the channel. Make sure I have the following permissions on the targeted channel : \n\n• Read Messages\n• Send Messages\n• Embed Links\n• Read Message History\n• Mention everyone, here and all roles\n\nThen, retry the command."));
 		});
 	}
