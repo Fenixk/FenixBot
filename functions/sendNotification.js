@@ -1,4 +1,7 @@
 const bgDescriptors = require('../constants/battleground-descriptors');
+const statusDescriptors = require('../constants/status-descriptors');
+const createEmbedCompact = require('../functions/createEmbedCompact.js');
+const Status = require("../schemas/Status.schema.js");
 const createEmbed = require('../functions/createEmbed.js');
 
 const sendNotification = (channel, bgType, guild, language) => {
@@ -19,7 +22,7 @@ const sendNotification = (channel, bgType, guild, language) => {
 					.catch(err => console.log('Failed to edit embed for SEND NOTIFICATION in ' + guild));
 					exist = true;
 				}
-				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === 'Battleground Activity'){
+				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === statusDescriptors[language].title){
 					statusExist = true;
 				}
 			}
@@ -27,11 +30,14 @@ const sendNotification = (channel, bgType, guild, language) => {
 
 		if (statusExist === false) {
 			console.log('Send Status because not exist in ' + guild);
-			setTimeout(() => channel.send(announceMessage, announceEmbed), 3000);
+			Status.findOne({ id: "1" }).then(status => {
+				const statusEmbed = createEmbedCompact(status, language);
+				channel.send(statusEmbed, language);
+			});
 		}
 		if (exist === false) {
 			console.log('Send ' + bgType + ' notification to ' + guild);
-			channel.send(announceMessage, announceEmbed);
+			setTimeout(() => channel.send(announceMessage, announceEmbed), 1000);
 		}
 	})
 	.catch(e => console.log('Failed to fetch message for SEND NOTIFICATION in ' + guild));
