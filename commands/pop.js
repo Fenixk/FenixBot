@@ -1,11 +1,10 @@
 const updateAllStatus = require('../functions/updateAllStatus.js');
 const sendAllNotifications = require('../functions/sendAllNotifications.js');
 const { sleepStartTime, sleepEndTime } = require('../config.json');
-const { UTC } = require('../config.json');
 
 module.exports = {
 	name: 'pop',
-	description: 'Test embed for a specific battlegrounds.',
+	description: 'Create notifications for BGs and update status to green.',
 	guildOnly: true,
 	roleOnly: true,
 	adminOnly: false,
@@ -19,6 +18,6 @@ module.exports = {
 };
 
 const isMessageDuringSleepHour = () => {
-	const currentTime = new Date(Date.now() + UTC * 3600000).getHours();
+	const currentTime = new Date(Date.now()).getHours();
 	return (currentTime >= sleepStartTime && currentTime < sleepEndTime);
 }
