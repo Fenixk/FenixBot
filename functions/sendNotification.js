@@ -15,7 +15,7 @@ const sendNotification = (channel, bgType, guild, language) => {
 			for (let i=0; i < botMessages.array().length; i++){
 				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === bgDescriptors[language][bgType].title) {
 					botMessages.array()[i].edit(announceEmbed)
-					.then(res => console.log('Send Notification for ' + guild))
+					.then(res => console.log('Update Notification for ' + guild))
 					.catch(err => console.log('Failed to edit embed for SEND NOTIFICATION in ' + guild));
 					exist = true;
 				}
@@ -26,6 +26,7 @@ const sendNotification = (channel, bgType, guild, language) => {
 		}
 
 		if (statusExist === false) {
+			console.log('Send Status because not exist in ' + guild);
 			setTimeout(() => channel.send(announceMessage, announceEmbed), 3000);
 		}
 		if (exist === false) {
