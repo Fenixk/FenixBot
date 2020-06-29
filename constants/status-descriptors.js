@@ -1,5 +1,6 @@
 const statusDescriptors = {
 	en: {
+		title: 'Battleground Activity',
 		description: 'What battlegrounds are currently popping ? Join the fight ⚔️ !',
 		footer: 'Battlegrounds focus on team based PvP fight and can be accessed in LFG.',
 		battleground: 'Battleground',
@@ -11,6 +12,7 @@ const statusDescriptors = {
 		skyring: "Champion's Skyring"
 	},
 	fr: {
+		title: 'Activité des champs de bataille',
 		description: 'Quels champ de batailles sont en cours ? Venez combattre ⚔️ !!',
 		footer: 'Les champs de batailles sont des instances PvP focalisé sur les combats.',
 		battleground: 'Champ de bataille',
