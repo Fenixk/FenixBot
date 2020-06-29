@@ -41,7 +41,7 @@ function translateDate(timestamp, language) {
 	console.log(Date.now());
 	const time = '**' + currentTime.getHours() + 'h' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes() + '**';
 	const date = ' - ' + currentTime.getDate() + '/' + currentTime.getMonth() + '/' + currentTime.getFullYear();
-	const timeString = time + (language === "en" ? ' (UTC+2)' : '') + ' - ' + date;
+	const timeString = time + (language === "en" ? ' (UTC+2)' : '') + date;
 
 	return timeString;
 }
