@@ -28,7 +28,7 @@ module.exports = {
 			}
 			Guilds.findOneAndUpdate({ guildId: message.guild.id }, data).then(res => {
 				if (!res) return;
-				let channels = guild.channels.cache.filter(channel => { return channel.id === res.channelId;}).array();
+				let channels = message.guild.channels.cache.filter(channel => { return channel.id === res.channelId;}).array();
 				if (channels && channels.length > 0) {
 					channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition; });
 					Status.findOne({ id: "1" }).then(status => {
@@ -47,7 +47,7 @@ module.exports = {
 			}
 			Guilds.findOneAndUpdate({ guildId: message.guild.id }, data).then(res => {
 				if (!res) return;
-				let channels = guild.channels.cache.filter(channel => { return channel.id === res.channelId;}).array();
+				let channels = message.guild.channels.cache.filter(channel => { return channel.id === res.channelId;}).array();
 				if (channels && channels.length > 0) {
 					channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition; });
 					Status.findOne({ id: "1" }).then(status => {
