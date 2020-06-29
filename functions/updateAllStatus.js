@@ -7,7 +7,6 @@ const updateAllStatus = (client, bgType, statusType) => {
 	Status.findOne({ id: "1" }).then(status => {
 		status[bgType] = statusType;
 		if (statusType === "green") status[`last${bgType}`] = Date.now();
-		console.log('Updating status ' + statusType);
 		Status.findOneAndUpdate({ _id: status._id }, status).then(new_status => {
 			client.guilds.cache.forEach(guild => {
 				Guilds.findOne({ guildId: guild.id }).then(res => {
