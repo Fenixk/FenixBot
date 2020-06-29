@@ -32,7 +32,7 @@ const createEmbedCompact = (status, language) => {
 };
 
 function translateDate(timestamp, language) {
-	if (timestamp === 0) {
+	if (parseInt(timestamp,10) === 0) {
 		return 'Not registred yet';
 	}
 	const UTCtime = UTC[language];
