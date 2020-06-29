@@ -16,7 +16,7 @@ const updateAllStatus = (client, bgType, statusType) => {
 					let channels = guild.channels.cache.filter(channel => { return channel.id === res.channelId;}).array();
 					if (channels && channels.length > 0) {
 						channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition; });
-						updateStatus(channels[0], status, res.guildName);
+						updateStatus(channels[0], status, res.guildName, res.language);
 					}
 				});
 			});

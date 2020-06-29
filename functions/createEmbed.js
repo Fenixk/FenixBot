@@ -7,12 +7,13 @@ const createEmbed = (bgType, status) => {
 	const currentTime = new Date(Date.now() + UTC * 3600000);
 	const timeString = '**' + currentTime.getHours() + 'h' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes() + '** (UTC+' + UTC + ')';
 	const bg = bgDescriptors[bgType];
+	const bgLang = bgDescriptors[language][bgType];
 	
 	const Embed = new Discord.MessageEmbed()
 		.setColor(colors[status])
-		.setTitle(bg.title)
+		.setTitle(bgLang.title)
 		.setURL('https://discord.gg/UTuDSMk')
-		.setDescription(bg.description[status])
+		.setDescription(bgLang.description[status])
 		.setThumbnail(bg.image)
 		.addFields(
 			{ name: 'Status', value: ':' + status + '_circle:', inline: true },
@@ -20,7 +21,7 @@ const createEmbed = (bgType, status) => {
 			{ name: 'Players', value: bg.players[status], inline: true },
 		)
 		.setTimestamp(new Date())
-		.setFooter(bg.footer, '');
+		.setFooter(bgLang.footer, '');
 
 	return Embed;
 };

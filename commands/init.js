@@ -30,7 +30,8 @@ module.exports = {
 			channelId: channel.id,
 			channelName: channel.name,
 			notification: true,
-			status: true
+			status: true,
+			language: 'en'
 		}
 
 		Guilds.findOneAndUpdate({ guildId: message.guild.id }, data, { upsert : true }).then().catch(err => console.log(err.message));

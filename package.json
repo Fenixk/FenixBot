@@ -1,5 +1,5 @@
 {
-	"name": "bot-fenix-dev",
+	"name": "bot-fenix",
 	"version": "3.0.1",
 	"description": "Fenix Bot for Tera PvP announcement.",
 	"main": "server.js",
