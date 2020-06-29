@@ -29,6 +29,7 @@ Here are the commands Users can do :
 Here are the commands Administrators can do :
 
 - `!init #channel` : To change the channel where the Battleground notifications and Battleground status are sent.
+- `!lang fr/de/en/ru` : To change the bot message language and time zone.
 - `!notif on/off` : To enable or disabled battleground notifications on your server. Does not affect battleground status update.
 
 Here are the commands Organizers can do : 
