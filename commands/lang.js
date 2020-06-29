@@ -47,10 +47,12 @@ module.exports = {
 			}
 			Guilds.findOneAndUpdate({ guildId: message.guild.id }, data).then(res => {
 				if (!res) return;
-				let channels = message.guild.channels.cache.filter(channel => { return channel.id === res.channelId;}).array();
+				let channels = guild.channels.cache.filter(channel => { return channel.id === res.channelId;}).array();
 				if (channels && channels.length > 0) {
 					channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition; });
-					updateStatus(channels[0], status, res.guildName, res.language);
+					Status.findOne({ id: "1" }).then(status => {
+						updateStatus(channels[0], status, res.guildName, res.language);
+					});
 				}
 			}).catch(err => console.log(err.message));
 			message.reply('les messages du bot seront désormais en français.');
