@@ -26,10 +26,8 @@ const updateAllStatus = (client, bgType, statusType) => {
 
 function getNowDate() {
 	const currentTime = new Date(Date.now() + UTC * 3600000);
-	const monthNames = ["January", "February", "March", "April", "May", "June",
-	"July", "August", "September", "October", "November", "December" ];
-	const time = 'At **' + currentTime.getHours() + 'h' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes() + '** (UTC+' + UTC + ')';
-	const date = 'on ' + currentTime.getDate() + ' ' + monthNames[currentTime.getMonth()] + ' ' + currentTime.getFullYear();
+	const time = '**' + currentTime.getHours() + 'h' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes() + '** (UTC+' + UTC + ')';
+	const date = 'on ' + currentTime.getDate() + '/' + currentTime.getMonth() + '/' + currentTime.getFullYear();
 	const timeString = time + ' ' + date;
 	return timeString;
 }

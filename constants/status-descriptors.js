@@ -29,8 +29,7 @@ const statusDescriptors = {
 	ru: {
 		title: 'Активность баттлграундов',
 		url: 'https://discord.gg/UTuDSMk',
-		description: 'What battlegrounds are currently popping ? Join the fight ⚔️ !',
-		description: 'Какие батлграунды в момент активны? Присоединяйся в к битве ⚔️!',
+		description: 'Какие батлграунды в момент активны? Присоединяйся в к битве ⚔️',
 		footer: 'баттлграунд ориентирована на командные пвп бои.',
 		battleground: 'Баттлграунд',
 		status: 'Статус',
@@ -43,7 +42,7 @@ const statusDescriptors = {
 	de: {
 		title: 'Schlachtgruppen Aktivität',
 		url: 'https://discord.gg/UTuDSMk',
-		description: 'Welche Schlachtgruppen werden gespielt ? Tritt dem Kampf bei ⚔️!',
+		description: 'Welche Schlachtgruppen werden gespielt? Tritt dem Kampf bei ⚔️',
 		footer: 'Schlachtgruppen fokusieren sich auf teambasierte PvP Kämpfe.',
 		battleground: 'Schlachtgruppe',
 		status: 'Status',
