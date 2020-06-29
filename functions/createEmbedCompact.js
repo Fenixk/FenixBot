@@ -1,7 +1,7 @@
 const statusDescription = require('../constants/status-descriptors');
 const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE } = require('../constants/battleground-types.js');
 const Discord = require('discord.js');
-const lang = require('../commands/lang');
+const { UTC } = require('../config.json');
 
 const createEmbedCompact = (status, language) => {
 	const state = statusDescription[language];
