@@ -1,5 +1,6 @@
 const updateStatus = require('../functions/updateStatus.js');
 const Guilds = require('../schemas/Guilds.schema.js');
+const Status = require('../schemas/Status.schema.js');
 
 module.exports = {
 	name: 'lang',
@@ -30,7 +31,9 @@ module.exports = {
 				let channels = guild.channels.cache.filter(channel => { return channel.id === res.channelId;}).array();
 				if (channels && channels.length > 0) {
 					channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition; });
-					updateStatus(channels[0], status, res.guildName, res.language);
+					Status.findOne({ id: "1" }).then(status => {
+						updateStatus(channels[0], status, res.guildName, res.language);
+					});
 				}
 			}).catch(err => console.log(err.message));
 			message.reply('messages from bot will be now in english.');
