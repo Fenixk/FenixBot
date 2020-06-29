@@ -39,8 +39,8 @@ function translateDate(timestamp, language) {
 	const currentTime = new Date(parseInt(timestamp,10) + UTCtime * 3600000);
 	const time = '**' + currentTime.getHours() + 'h' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes() + '**';
 	const date = ' - ' + currentTime.getDate() + '/' + currentTime.getMonth() + '/' + currentTime.getFullYear();
-	const timeString = time + ' ' + date;
-	console.log(timeString);
+	const timeString = time + (language === "en" ? ' (UTC+2)' : '') + ' - ' + + date;
+
 	return timeString;
 }
 
