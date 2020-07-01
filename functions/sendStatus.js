@@ -1,5 +1,6 @@
 const createEmbedCompact = require('../functions/createEmbedCompact.js');
 const Status = require("../schemas/Status.schema.js");
+const Guilds = require("../schemas/Guilds.schema.js");
 
 const sendStatus = (channel, language) => {
 
