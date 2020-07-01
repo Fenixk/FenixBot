@@ -3,10 +3,7 @@ const Status = require("../schemas/Status.schema.js");
 const Guilds = require("../schemas/Guilds.schema.js");
 
 const sendStatus = (channel, language) => {
-
-	console.log(channel.guild_id);
-	console.log(channel.guild.id);
-	Guilds.findOne({ guildId: channel.guild_id }).then(res => {
+	Guilds.findOne({ guildId: channel.guild.id }).then(res => {
 		if (!res) return;
 		else {
 			Status.findOne({ id: "1" }).then(status => {
