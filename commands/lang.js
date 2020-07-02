@@ -5,7 +5,7 @@ const { frenchAliases, englishAliases, germanAliases, russianAliases } =  requir
 
 module.exports = {
 	name: 'lang',
-	description: 'Change the language of the bot messages.',
+	description: 'Change the language of the bot messages and the time zone.',
 	guildOnly: false,
 	roleOnly: false,
 	adminOnly: true,
@@ -17,7 +17,7 @@ module.exports = {
 		if (!args[0]) {
 			Guilds.findOne({ guildId: message.guild.id }).then(res => {
 				if (!res) return message.reply('You have to use the command `!init #your-bg-channel` before using !lang command.');
-				message.reply('message language for the bot on your server is currently **' +	res.language + '**. If you want to change it use `!lang en/fr` command.');
+				message.reply('message language for the bot on your server is currently **' +	res.language + '**. If you want to change it use `!lang en/fr/de/ru` command.');
 			});
 			return ;
 		}
@@ -46,7 +46,7 @@ module.exports = {
 			}
 		}
 
-		message.reply('Invalid argument. You have to choose between en/fr. Use `!lang en/fr`.');
+		message.reply('Invalid argument. You have to choose between en/fr/de/ru. Use `!lang en/fr/de/ru`.');
 		return ;
 	}
 };

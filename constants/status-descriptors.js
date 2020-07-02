@@ -27,11 +27,11 @@ const statusDescriptors = {
 		skyring: "Cercle céleste champions"
 	},
 	ru: {
-		title: 'Активность баттлграундов',
+		title: 'Активность арен',
 		url: 'https://discord.gg/UTuDSMk',
-		description: 'Какие баттлграунды в данным момент активны? Венес ⚔️ !',
-		footer: 'баттлграунд ориентирована на командные пвп бои.',
-		battleground: 'Баттлграунд',
+		description: 'Какие арены в данный момент активны? Присоединяйтесь ⚔️!',
+		footer: 'Арены ориентированы на командные бои, можно через лфг.',
+		battleground: 'Арена',
 		status: 'Статус',
 		last: 'Последний запуск',
 		corsair: 'Твердыня корсаров',
