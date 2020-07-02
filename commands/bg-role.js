@@ -30,6 +30,7 @@ module.exports = {
 
 
 		let role = message.guild.roles.cache.find(x => x.name == bgRole || x.id == bgRole);
+
 		if(!role) {
 			return message.reply('The role **' + bgRole + '** does not exist. Please use an existing one.');
 		}
@@ -41,7 +42,9 @@ module.exports = {
 			}
 	
 			Guilds.findOneAndUpdate({ guildId: message.guild.id }, data).then().catch(err => console.log(err.message));
+
 			return message.reply('Messages from bot will now use the role **' + role.name + '**');
+
 		}
 
 		return ;
