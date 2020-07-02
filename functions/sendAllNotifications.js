@@ -11,7 +11,7 @@ const sendAllNotification = (client, bgType) => {
 				if (channels && channels.length > 0) {
 					channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition;}); 
 					if (channels[0].permissionsFor(guild.me).has(["SEND_MESSAGES"]))
-						sendNotification(channels[0], bgType, res.guildName, res.language);
+						sendNotification(channels[0], bgType, res.guildName, res.language, res.role);
 				}
 				else return;
 			}

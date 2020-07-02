@@ -32,7 +32,7 @@ module.exports = {
 					language: lang
 				}
 				Guilds.findOneAndUpdate({ guildId: message.guild.id }, data).then(res => {
-					if (!res) return;
+					if (!res) return message.reply('You have to use the command `!init #your-bg-channel` before using !lang command.');
 					let channels = message.guild.channels.cache.filter(channel => { return channel.id === res.channelId;}).array();
 					if (channels && channels.length > 0) {
 						channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition; });
