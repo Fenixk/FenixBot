@@ -4,17 +4,21 @@ const createEmbedCompact = require('../functions/createEmbedCompact.js');
 const Status = require("../schemas/Status.schema.js");
 const createEmbed = require('../functions/createEmbed.js');
 
-const sendNotification = (channel, bgType, guild, language, bgRole) => {
+const sendNotification = (channel, bgType, guild, language, roleId) => {
 	let botMessages;
 	let exist = false;
 	let statusExist = false;
+	let roleString;
 
 	if (!bgRole) {
-		bgRole = "here";
+		roleString = "@here";
+	}
+	else {
+		roleString = "<@&" + roleId + ">";
 	}
 
 	const announceEmbed = createEmbed(bgType, 'green', language);
-	const announceMessage = "Hello @" + bgRole + ", **__" + bgType.charAt(0).toUpperCase() + bgType.slice(1) + "__** is currently popping !";
+	const announceMessage = "Hello" + roleString + ", **__" + bgType.charAt(0).toUpperCase() + bgType.slice(1) + "__** is currently popping !";
 
 	channel.messages.fetch({ limit: 100 }).then(messages => {
 		botMessages = messages.filter(msg => msg.author.bot);

@@ -36,7 +36,7 @@ module.exports = {
 			const data = {
 				guildId: message.guild.id,
 				guildName: message.guild.name,
-				role: bgRole
+				role: role.id
 			}
 	
 			Guilds.findOneAndUpdate({ guildId: message.guild.id }, data).then().catch(err => console.log(err.message));
