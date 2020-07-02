@@ -2,6 +2,10 @@
 
 Hello, I'm Fenix, I've been playing on Seren for 8 years. I've made the observation that BGs are popping thanks to organized raid in Mystel and discord messages. However, a lot of people are missing these notifications. That's why, to improve the communication and make BGs pop faster & last longer, I have created the Fenix Bot. It will announce when BGs are popping over all discord servers and update general status of battleground activities. 
 
+## Recent News !
+
+I've added the commands `!lang` and `!bg-role`, more information in the command section below.
+
 ## What does the bot do ?
 
 - Update overall battleground status: 
@@ -30,7 +34,7 @@ Here are the commands Administrators can do :
 
 - `!init #channel` : To change the channel where the Battleground notifications and Battleground status are sent.
 - `!lang fr/de/en/ru` : To change the bot message language and time zone.
-- `!bg-role roleName` : To change the @role of the bot message notification, default is @here.
+- `!bg-role @roleName` : To change the @here to @role inside the bot messages, default is @here.
 - `!notif on/off` : To enable or disabled battleground notifications on your server. Does not affect battleground status update.
 
 Here are the commands Organizers can do : 
