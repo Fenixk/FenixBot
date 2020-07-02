@@ -17,7 +17,7 @@ module.exports = {
 			Guilds.findOne({ guildId: message.guild.id }).then(res => {
 				if (!res) return message.reply('You have to use the command `!init #your-bg-channel` before using !lang command.');
 				if (!res.role) message.reply('Battleground role for the bot on your server is currently **here**. If you want to change it use `!role roleName` command.');
-				else message.reply('Battleground role for the bot on your server is currently **' + res.role + '**. If you want to change it use `!role roleName` command.');
+				else message.reply('Battleground role for the bot on your server is currently **<@&' + res.role + '>**. If you want to change it use `!role roleName` command.');
 			});
 			return ;
 		}
