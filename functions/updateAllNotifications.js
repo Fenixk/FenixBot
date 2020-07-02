@@ -1,5 +1,6 @@
 const updateNotifications = require("../functions/updateNotifications.js");
 const Guilds = require('../schemas/Guilds.schema.js');
+const Status = require('../schemas/Status.schema.js');
 
 const updateAllNotifications = (client, bgType, statusType) => {
 
