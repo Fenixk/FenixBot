@@ -28,6 +28,8 @@ module.exports = {
 			bgRole = args[0].substring(1);
 		}
 
+		console.log(bgRole);
+
 		let role = message.guild.roles.cache.find(x => x.name == bgRole);
 		if(!role) {
 			return message.reply('The role **' + bgRole + '** does not exist. Please use an existing one.');
