@@ -18,7 +18,7 @@ const sendNotification = (channel, bgType, guild, language, roleId) => {
 	}
 
 	const announceEmbed = createEmbed(bgType, 'green', language);
-	const announceMessage = "Hello" + roleString + ", **__" + bgType.charAt(0).toUpperCase() + bgType.slice(1) + "__** is currently popping !";
+	const announceMessage = "Hello " + roleString + ", **__" + bgType.charAt(0).toUpperCase() + bgType.slice(1) + "__** is currently popping !";
 
 	channel.messages.fetch({ limit: 100 }).then(messages => {
 		botMessages = messages.filter(msg => msg.author.bot);
