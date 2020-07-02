@@ -10,7 +10,7 @@ const sendNotification = (channel, bgType, guild, language, roleId) => {
 	let statusExist = false;
 	let roleString;
 
-	if (!bgRole) {
+	if (!roleId) {
 		roleString = "@here";
 	}
 	else {
