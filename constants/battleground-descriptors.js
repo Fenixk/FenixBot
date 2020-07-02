@@ -36,7 +36,7 @@ const bgDescriptor = {
 			orange: "?/6",
 			red: "0/6"
 		},
-		timer: 0.2
+		timer: 60
 	},
 	en: {
 		[CORSAIR_TYPE]: {
