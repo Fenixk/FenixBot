@@ -24,7 +24,7 @@ module.exports = {
 
 		bgRole = args[0];
 
-		if (args[0].startWith('@')){
+		if (args[0].startsWith('@')){
 			bgRole = args[0].substring(1);
 		}
 
