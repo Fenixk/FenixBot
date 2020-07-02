@@ -3,10 +3,14 @@ const colors = require('../constants/colors');
 const { UTC } = require('../config.json');
 const Discord = require('discord.js');
 
-const createEmbed = (bgType, status, language) => {
-	const timeString = translateDate(Date.now(), language);
+const createEmbed = (bgType, status, language, updateTime) => {
+	let timeString = translateDate(Date.now(), language);
 	const bg = bgDescriptors[bgType];
 	const bgLang = bgDescriptors[language][bgType];
+
+	if (status === 'orange' && updateTime) {
+		timeString = translateDate(updateTime, language);
+	}
 	
 	const Embed = new Discord.MessageEmbed()
 		.setColor(colors[status])

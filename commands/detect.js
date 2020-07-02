@@ -30,9 +30,27 @@ module.exports = {
 						value[CORSAIR_TYPE] = true;
 					else if (presence.activities[0].assets.largeText.includes("Shore Hold"))
 						value[SHORE_TYPE] = true;
-					else if (presence.activities[0].assets.largeText.includes("Skyring"))
+					else if (presence.activities[0].assets.largeText.includes("Битва на побережье"))
+						value[SHORE_TYPE] = true;
+					else if (presence.activities[0].assets.largeText.includes("Territoire côtier"))
+						value[SHORE_TYPE] = true;
+					else if (presence.activities[0].assets.largeText.includes("Küstenterritorium"))
+						value[SHORE_TYPE] = true;
+					else if (presence.activities[0].assets.largeText.includes("Champions' Skyring"))
 						value[SKYRING_TYPE] = true;
+					else if (presence.activities[0].assets.largeText.includes("Cercle céleste des Champions"))
+						value[SKYRING_TYPE] = true;
+					else if (presence.activities[0].assets.largeText.includes("Himmelsring der Helden"))
+						value[SKYRING_TYPE] = true;
+					else if (presence.activities[0].assets.largeText.includes("Небесная Арена"))
+						value[SKYRING_TYPE] = true;
+					else if (presence.activities[0].assets.largeText.includes("Подземная арена"))
+						value[GRIDIRON_TYPE] = true;
 					else if (presence.activities[0].assets.largeText.includes("Gridiron"))
+						value[GRIDIRON_TYPE] = true;
+					else if (presence.activities[0].assets.largeText.includes("Unterirdisches Schlachtfeld"))
+						value[GRIDIRON_TYPE] = true;
+					else if (presence.activities[0].assets.largeText.includes("Champ de bataille souterrain"))
 						value[GRIDIRON_TYPE] = true;
 				}
 			});
