@@ -24,11 +24,13 @@ module.exports = {
 
 		bgRole = args[0];
 
-		if (args[0].startsWith('@')){
-			bgRole = args[0].substring(1);
-		}
+		if (args[0].startsWith('<@&')){
+			bgRole = args[0].substring(3, args[0].length-1);
+		  }
 
-		let role = message.guild.roles.cache.find(x => x.name == bgRole);
+
+		let role = message.guild.roles.cache.find(x => x.name == bgRole || x.id == bgRole);
+
 		if(!role) {
 			return message.reply('The role **' + bgRole + '** does not exist. Please use an existing one.');
 		}
@@ -40,7 +42,9 @@ module.exports = {
 			}
 	
 			Guilds.findOneAndUpdate({ guildId: message.guild.id }, data).then().catch(err => console.log(err.message));
-			return message.reply('Messages from bot will now use the role **' + bgRole + '**');
+
+			return message.reply('Messages from bot will now use the role **' + role.name + '**');
+
 		}
 
 		return ;
