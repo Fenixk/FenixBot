@@ -9,7 +9,7 @@ const GuildsSchema = new Schema({
 	notification: { type: Boolean, default: true, required: true },
 	status: { type: Boolean, default: true, required: true },
 	language: { type: String, default: 'en', required: true },
-	role: { type: String, default: 'here' }
+	role: { type: String }
 });
 
 module.exports = mongoose.model("Guilds", GuildsSchema, "Guilds");
