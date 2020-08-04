@@ -1,7 +1,4 @@
-const updateStatus = require('../functions/updateStatus.js');
 const Guilds = require('../schemas/Guilds.schema.js');
-const Status = require('../schemas/Status.schema.js');
-const { frenchAliases, englishAliases, germanAliases, russianAliases } =  require('../config.json');
 
 module.exports = {
 	name: 'bg-role',

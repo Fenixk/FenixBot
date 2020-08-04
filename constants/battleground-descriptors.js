@@ -55,7 +55,7 @@ const bgDescriptor = {
 				orange: "Unknown Status. Check with Tera PvP EU moderators !",
 				red: "Not popping."
 			},
-			footer: "Shore Hold is a PvP instance where people fight in 7vs7 in the sun !!!"
+			footer: "Shore Hold is a PvP instance where people fight in 7vs7 under the sun!"
 		},
 		[GRIDIRON_TYPE]: {
 			title: "Gridiron",
@@ -73,7 +73,7 @@ const bgDescriptor = {
 				orange: "Unknown Status. Check with Tera PvP EU moderators !",
 				red: "Not popping."
 			},
-			footer: "Champion' Skyring is a PvP instance where the best fight happend !!"
+			footer: "Champion' Skyring is a PvP instance where the best fight happens !!"
 		}, 
 	},
 	fr: {
