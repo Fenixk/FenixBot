@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'troll',
 	description: 'Troll feature to send funny message to users.',
-	aliases: ['troll', '!fenixtroll'],
+	aliases: ['troll', 'fenixtroll'],
 	execute(client, message) {
 		const troll = [
 			"Fenix is the best, he's the best slayer EUW and he's my creator... (HELP ME I'M HIS PRISONER, HE FORCES ME TO SAY THAT.)",
