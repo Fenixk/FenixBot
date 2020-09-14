@@ -19,7 +19,9 @@ module.exports = {
 		client.guilds.cache.forEach((guild) => {
 			if (!guild || !guild.presences) return;
 			guild.presences.cache.array().forEach(presence => {
-				if (presence.activities.length > 0 && presence.activities[0].name === "TERA" && presence.activities[0].assets && presence.activities[0].assets.largeText){ 
+				console.log(presence.user.username);
+				console.log(presence.activities[0]);
+				if (presence.activities.length > 0 && presence.activities[0].name === "TERA" && presence.activities[0].assets && presence.activities[0].assets.largeText){
 					if (presence.activities[0].assets.largeText.includes("Твердыня корсаров"))
 						value[CORSAIR_TYPE] = true;
 					else if (presence.activities[0].assets.largeText.includes("Corsairs' Stronghold"))
