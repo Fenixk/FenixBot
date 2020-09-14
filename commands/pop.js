@@ -9,10 +9,10 @@ module.exports = {
 	roleOnly: true,
 	adminOnly: false,
 	aliases: ['pop'],
-	execute(client, message, bgType) {
+	execute(client, message, bgType, userName) {
 		if (!bgType) return message.reply('Missing argument. Please put the name of the bg you want to pop.'); 
 		updateAllStatus(client, bgType, 'green');
-		if (!isMessageDuringSleepHour()) sendAllNotifications(client, bgType);
+		if (!isMessageDuringSleepHour()) sendAllNotifications(client, bgType, userName);
 		if (isMessageDuringSleepHour() && message) message.reply("ZzzZzZ, I'm sleeping between 1h00 and 10h00. However I'll update status. Good night.")
 	}
 };

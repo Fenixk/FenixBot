@@ -64,19 +64,19 @@ let retry = {
 
 // Automatic Detection for Discord Game Activity every 2 minutes.
 setInterval(() => { 
-	const values = client.commands.get('detect').execute(client); 
+	const [values, userName] = client.commands.get('detect').execute(client); 
 	const bgTypes = [CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE];
 
 	bgTypes.forEach(bgType => {
 			if (values[bgType] && retry[bgType]) { 
 				console.log('Auto Detection: Entering into ' + bgType);
 				retry[bgType] = false;
-				client.commands.get('pop').execute(client, null, bgType);
+				client.commands.get('pop').execute(client, null, bgType, userName);
 				createTimer(bgType, 30*60);
 			}
 			else if (!values[bgType] && !retry[bgType]) {
 				console.log('Auto Detection: Leaving ' + bgType);
-				client.commands.get('pop').execute(client, null, bgType);
+				client.commands.get('pop').execute(client, null, bgType, userName);
 				createTimer(bgType, 30*60);
 				retry[bgType] = true;
 			}
