@@ -119,7 +119,8 @@ client.on('message', message => {
 		}
 
 		try {
-			command.execute(client, message, bgType, args);
+			if (command.name !== 'pop') command.execute(client, message, bgType, args);
+			if (command.name === 'pop') command.execute(client, message, bgType, message.member.user.username);
 			if (command.name === 'pop' && bgType) createTimer(bgType, bgDescriptors[bgType].timer*60);
 			if (command.name === 'cancel') clearTimer(bgType, true, true);
 			
