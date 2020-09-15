@@ -14,11 +14,12 @@ module.exports = {
 			[GRIDIRON_TYPE]: false,
 			[SKYRING_TYPE]: false,
 		};
-		let userName;
-		let userTag;
-		let activity;
-		let guildName;
-		let assets;
+		
+		let userName = '';
+		let userTag = '';
+		let activity = '';
+		let guildName = '';
+		let assets = '';
 
 		// Search inside all presences of all the guilds with the bot.
 		client.guilds.cache.forEach((guild) => {
