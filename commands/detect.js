@@ -14,7 +14,7 @@ module.exports = {
 			[GRIDIRON_TYPE]: false,
 			[SKYRING_TYPE]: false,
 		};
-		
+
 		let userName = '';
 		let userTag = '';
 		let activity = '';
@@ -180,19 +180,19 @@ module.exports = {
 				'Gridiron: ' + JSON.stringify(value[GRIDIRON_TYPE]) + '\n' +
 				'Skyring: ' + JSON.stringify(value[SKYRING_TYPE]) + '\n'
 			);
-		}
 
-		if (userName) {
-			message.author.send(
-				'Username: ' + userName + '\n' +
-				'Discord tag: ' + userTag + '\n' +
-				'Discord server: ' + guildName + '\n'
-			);
-		}
-
-		if (assets) {
-			message.author.send(JSON.stringify(assets));
-			message.author.send(JSON.stringify(activity));
+			if (userName) {
+				message.author.send(
+					'Username: ' + userName + '\n' +
+					'Discord tag: ' + userTag + '\n' +
+					'Discord server: ' + guildName + '\n'
+				);
+			}
+	
+			if (assets) {
+				message.author.send(JSON.stringify(assets));
+				message.author.send(JSON.stringify(activity));
+			}
 		}
 
 		return [value, userName];
