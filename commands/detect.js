@@ -14,7 +14,11 @@ module.exports = {
 			[GRIDIRON_TYPE]: false,
 			[SKYRING_TYPE]: false,
 		};
-		let userName = '';
+		let userName;
+		let userTag;
+		let activity;
+		let guildName;
+		let assets;
 
 		// Search inside all presences of all the guilds with the bot.
 		client.guilds.cache.forEach((guild) => {
@@ -24,94 +28,172 @@ module.exports = {
 					if (presence.activities[0].assets.largeText.includes("Твердыня корсаров")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Corsairs' Stronghold")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Fort des Corsaires")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}    
 					else if (presence.activities[0].assets.largeText.includes("Korsarenfestung")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Shore Hold")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Битва на побережье")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Territoire côtier")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Küstenterritorium")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Champions' Skyring")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Cercle céleste des Champions")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Himmelsring der Helden")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Небесная Арена")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Подземная арена")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Gridiron")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Unterirdisches Schlachtfeld")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 					else if (presence.activities[0].assets.largeText.includes("Champ de bataille souterrain")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
-						console.log(presence.activities[0]);
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log(presence.activities[0]); 
 					}
 				}
 			});
 		});
 		if (message) {
-			message.author.send('Corsair: ' + JSON.stringify(value[CORSAIR_TYPE]) + '\n' +
+			message.author.send(
+				'Corsair: ' + JSON.stringify(value[CORSAIR_TYPE]) + '\n' +
 				'Shore: ' + JSON.stringify(value[SHORE_TYPE]) + '\n' +
 				'Gridiron: ' + JSON.stringify(value[GRIDIRON_TYPE]) + '\n' +
-				'Skyring: ' + JSON.stringify(value[SKYRING_TYPE]) + '\n');
+				'Skyring: ' + JSON.stringify(value[SKYRING_TYPE]) + '\n'
+			);
 		}
+
+		if (userName) {
+			message.author.send(
+				'Username: ' + userName + '\n' +
+				'Discord tag: ' + userTag + '\n' +
+				'Discord server: ' + guildName + '\n'
+			);
+		}
+
+		if (assets) {
+			message.author.send(JSON.stringify(assets));
+			message.author.send(JSON.stringify(activity));
+		}
+
 		return [value, userName];
 	}
 };
