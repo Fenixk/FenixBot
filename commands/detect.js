@@ -1,4 +1,5 @@
 const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE } = require('../constants/battleground-types.js');
+const { checkEuServer } = require('../functions/checkEuServer.js');
 
 module.exports = {
 	name: 'detect',
@@ -26,7 +27,11 @@ module.exports = {
 			if (!guild || !guild.presences) return;
 			guild.presences.cache.array().forEach(presence => {
 				if (presence.activities.length > 0 && presence.activities[0].name === "TERA" && presence.activities[0].assets && presence.activities[0].assets.largeText){
-					if (presence.activities[0].assets.largeText.includes("Твердыня корсаров")) {
+					
+					let isEuServer = checkEuServer(presence.activities[0].assets.smallText);
+					let activityMessage = presence.activities[0].assets.largeText;
+
+					if (isEuServer && activityMessage.includes("Твердыня корсаров")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -35,7 +40,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Corsairs' Stronghold")) {
+					else if (isEuServer && activityMessage.includes("Corsairs' Stronghold")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -44,7 +49,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Fort des Corsaires")) {
+					else if (isEuServer && activityMessage.includes("Fort des Corsaires")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -53,7 +58,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}    
-					else if (presence.activities[0].assets.largeText.includes("Korsarenfestung")) {
+					else if (isEuServer && activityMessage.includes("Korsarenfestung")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -62,7 +67,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Shore Hold")) {
+					else if (isEuServer && activityMessage.includes("Shore Hold")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -71,7 +76,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Битва на побережье")) {
+					else if (isEuServer && activityMessage.includes("Битва на побережье (RU)")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -80,7 +85,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Territoire côtier")) {
+					else if (isEuServer && activityMessage.includes("Territoire côtier")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -89,7 +94,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Küstenterritorium")) {
+					else if (isEuServer && activityMessage.includes("Küstenterritorium")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -98,7 +103,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Champions' Skyring")) {
+					else if (isEuServer && activityMessage.includes("Champions' Skyring")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -107,7 +112,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Cercle céleste des Champions")) {
+					else if (isEuServer && activityMessage.includes("Cercle céleste des Champions")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -116,7 +121,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Himmelsring der Helden")) {
+					else if (isEuServer && activityMessage.includes("Himmelsring der Helden")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -125,7 +130,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Небесная Арена")) {
+					else if (isEuServer && activityMessage.includes("Небесная Арена (RU)")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -134,7 +139,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Подземная арена")) {
+					else if (isEuServer && activityMessage.includes("Подземная арена (RU)")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -143,7 +148,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Gridiron")) {
+					else if (isEuServer && activityMessage.includes("Gridiron")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -152,7 +157,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Unterirdisches Schlachtfeld")) {
+					else if (isEuServer && activityMessage.includes("Unterirdisches Schlachtfeld")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -161,7 +166,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 						console.log(presence.activities[0]); 
 					}
-					else if (presence.activities[0].assets.largeText.includes("Champ de bataille souterrain")) {
+					else if (isEuServer && activityMessage.includes("Champ de bataille souterrain")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;

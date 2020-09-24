@@ -3,6 +3,7 @@
 	"UTC": { "en": 2, "fr": 2, "de": 2, "ru": 3 },
 	"sleepStartTime": 1,
 	"sleepEndTime": 10,
+	"serverName": ["Seren", "Mystel", "Yurian", "Shakan"],
 	"allowedRoles": ["Organizer", "Organizers", "Mod", "Mods", "Admin", "Co-Admin"],
 	"corsairAliases": ["corsair", "cs", "coco", "corsair-stronghold"],
 	"shoreAliases": ["shore", "sh", "shore-hold"],
