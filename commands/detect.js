@@ -1,5 +1,5 @@
 const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE } = require('../constants/battleground-types.js');
-const { checkEuServer } = require('../functions/checkEuServer.js');
+const checkEuServer = require('../functions/checkEuServer.js');
 
 module.exports = {
 	name: 'detect',
