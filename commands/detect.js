@@ -31,149 +31,150 @@ module.exports = {
 					let isEuServer = checkEuServer(presence.activities[0].assets.smallText);
 					let activityMessage = presence.activities[0].assets.largeText;
 
-					if (isEuServer && activityMessage.includes("Твердыня корсаров")) {
+					if (activityMessage.includes("Твердыня корсаров")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+						server = isEuServer;
+
 					}
-					else if (isEuServer && activityMessage.includes("Corsairs' Stronghold")) {
+					else if (activityMessage.includes("Corsairs' Stronghold")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Fort des Corsaires")) {
+					else if (activityMessage.includes("Fort des Corsaires")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}    
-					else if (isEuServer && activityMessage.includes("Korsarenfestung")) {
+					else if (activityMessage.includes("Korsarenfestung")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Shore Hold")) {
+					else if (activityMessage.includes("Shore Hold")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Битва на побережье (RU)")) {
+					else if (activityMessage.includes("Битва на побережье (RU)")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Territoire côtier")) {
+					else if (activityMessage.includes("Territoire côtier")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Küstenterritorium")) {
+					else if (activityMessage.includes("Küstenterritorium")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Champions' Skyring")) {
+					else if (activityMessage.includes("Champions' Skyring")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Cercle céleste des Champions")) {
+					else if (activityMessage.includes("Cercle céleste des Champions")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Himmelsring der Helden")) {
+					else if (activityMessage.includes("Himmelsring der Helden")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Небесная Арена (RU)")) {
+					else if (activityMessage.includes("Небесная Арена (RU)")) {
 						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Подземная арена (RU)")) {
+					else if (activityMessage.includes("Подземная арена (RU)")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Gridiron")) {
+					else if (activityMessage.includes("Gridiron")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Unterirdisches Schlachtfeld")) {
+					else if (activityMessage.includes("Unterirdisches Schlachtfeld")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
-					else if (isEuServer && activityMessage.includes("Champ de bataille souterrain")) {
+					else if (activityMessage.includes("Champ de bataille souterrain")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						console.log(presence.activities[0]); 
+
 					}
 				}
 			});
@@ -189,6 +190,7 @@ module.exports = {
 			if (userName) {
 				message.author.send(
 					'Username: ' + userName + '\n' +
+					'Server: ' + server + '\n' +
 					'Discord tag: ' + userTag + '\n' +
 					'Discord server: ' + guildName + '\n'
 				);
