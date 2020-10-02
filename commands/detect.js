@@ -28,6 +28,7 @@ module.exports = {
 			guild.presences.cache.array().forEach(presence => {
 				if (presence.activities.length > 0 && presence.activities[0].name === "TERA" && presence.activities[0].assets && presence.activities[0].assets.largeText){
 					
+					return;
 					let isEuServer = checkEuServer(presence.activities[0].assets.smallText);
 					let activityMessage = presence.activities[0].assets.largeText;
 
