@@ -1,6 +1,6 @@
 {
 	"prefix": "!",
-	"UTC": { "en": 2, "fr": 2, "de": 2, "ru": 3 },
+	"UTC": { "en": 1, "fr": 1, "de": 1, "ru": 3 },
 	"sleepStartTime": 1,
 	"sleepEndTime": 10,
 	"serverName": ["Seren", "Mystel", "Yurian", "Shakan"],
