@@ -30,10 +30,20 @@ module.exports = {
 		
 					isEUServer = presence.activities[0].assets.smallText.includes("EU");
 					if (!isEUServer) {
+						console.log('Not in Europe Server.');
 						return;
 					}
-
 					let activityMessage = presence.activities[0].assets.largeText;
+
+					if (presence.activities[0].assets.smallText.includes("Golden")) {
+						value[SHORE_TYPE] = true;
+						userName = presence.user.username;
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+						console.log("test True");
+					}
 
 					if (activityMessage.includes("Твердыня корсаров")) {
 						value[CORSAIR_TYPE] = true;
