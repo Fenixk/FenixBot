@@ -22,12 +22,18 @@ module.exports = {
 		let assets = '';
 		let isEUServer = false;
 
+		console.log('coucou');
+
 		// Search inside all presences of all the guilds with the bot.
 		client.guilds.cache.forEach((guild) => {
 			if (!guild || !guild.presences) return;
 			guild.presences.cache.array().forEach(presence => {
 				if (presence.activities.length > 0 && presence.activities[0].name === "TERA" && presence.activities[0].assets && presence.activities[0].assets.largeText){
 		
+					if (!presence.activities[0].assets.smallText) {
+						return;
+					}
+					
 					isEUServer = presence.activities[0].assets.smallText.includes("EU");
 					if (!isEUServer) {
 						console.log('Not in Europe Server.');
