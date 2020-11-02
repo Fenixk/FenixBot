@@ -32,11 +32,12 @@ module.exports = {
 					}
 
 					isEUServer = presence.activities[0].assets.smallText.includes("EU");
+					console.log(isEUServer);
 					if (!isEUServer) {
 						return;
 					}
 					let activityMessage = presence.activities[0].assets.largeText;
-					
+
 					if (activityMessage.includes("Твердыня корсаров")) {
 						value[CORSAIR_TYPE] = true;
 						userName = presence.user.username;
