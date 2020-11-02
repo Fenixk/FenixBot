@@ -27,16 +27,13 @@ module.exports = {
 			if (!guild || !guild.presences) return;
 			guild.presences.cache.array().forEach(presence => {
 				if (presence.activities.length > 0 && presence.activities[0].name === "TERA" && presence.activities[0].assets && presence.activities[0].assets.largeText){
-					if (!presence.activities[0].assets.smallText) {
-						return;
-					}
+					let activityMessage = presence.activities[0].assets.largeText;
 
-					isEUServer = presence.activities[0].assets.largeText.includes("EU") || presence.activities[0].assets.largeText.includes("RU");
-					console.log(presence.activities[0].assets.largeText);
+					isEUServer = activityMessage.includes("EU") || activityMessage.includes("RU");
 					if (!isEUServer) {
 						return;
 					}
-					let activityMessage = presence.activities[0].assets.largeText;
+					message.author.send(activityMessage);
 
 					if (activityMessage.includes("Твердыня корсаров")) {
 						value[CORSAIR_TYPE] = true;
