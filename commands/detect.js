@@ -32,7 +32,6 @@ module.exports = {
 					}
 
 					isEUServer = presence.activities[0].assets.smallText.includes("EU");
-					console.log(isEUServer);
 					if (!isEUServer) {
 						return;
 					}
