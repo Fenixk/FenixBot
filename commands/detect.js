@@ -1,5 +1,4 @@
 const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE } = require('../constants/battleground-types.js');
-const checkEuServer = require('../functions/checkEuServer.js');
 
 module.exports = {
 	name: 'detect',
@@ -21,15 +20,19 @@ module.exports = {
 		let activity = '';
 		let guildName = '';
 		let assets = '';
+		let isEUServer = false;
 
 		// Search inside all presences of all the guilds with the bot.
 		client.guilds.cache.forEach((guild) => {
 			if (!guild || !guild.presences) return;
 			guild.presences.cache.array().forEach(presence => {
 				if (presence.activities.length > 0 && presence.activities[0].name === "TERA" && presence.activities[0].assets && presence.activities[0].assets.largeText){
-					
-					return;
-					let isEuServer = checkEuServer(presence.activities[0].assets.smallText);
+		
+					isEUServer = presence.activities[0].assets.smallText.includes("EU");
+					if (!isEUServer) {
+						return;
+					}
+
 					let activityMessage = presence.activities[0].assets.largeText;
 
 					if (activityMessage.includes("Твердыня корсаров")) {
@@ -39,8 +42,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-						server = isEuServer;
-
 					}
 					else if (activityMessage.includes("Corsairs' Stronghold")) {
 						value[CORSAIR_TYPE] = true;
@@ -49,7 +50,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Fort des Corsaires")) {
 						value[CORSAIR_TYPE] = true;
@@ -58,7 +58,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}    
 					else if (activityMessage.includes("Korsarenfestung")) {
 						value[CORSAIR_TYPE] = true;
@@ -67,7 +66,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Shore Hold")) {
 						value[SHORE_TYPE] = true;
@@ -76,7 +74,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Битва на побережье (RU)")) {
 						value[SHORE_TYPE] = true;
@@ -85,7 +82,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Territoire côtier")) {
 						value[SHORE_TYPE] = true;
@@ -94,7 +90,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Küstenterritorium")) {
 						value[SHORE_TYPE] = true;
@@ -103,7 +98,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Champions' Skyring")) {
 						value[SKYRING_TYPE] = true;
@@ -112,7 +106,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Cercle céleste des Champions")) {
 						value[SKYRING_TYPE] = true;
@@ -121,7 +114,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Himmelsring der Helden")) {
 						value[SKYRING_TYPE] = true;
@@ -130,7 +122,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Небесная Арена (RU)")) {
 						value[SKYRING_TYPE] = true;
@@ -139,7 +130,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Подземная арена (RU)")) {
 						value[GRIDIRON_TYPE] = true;
@@ -148,7 +138,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Gridiron")) {
 						value[GRIDIRON_TYPE] = true;
@@ -157,7 +146,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Unterirdisches Schlachtfeld")) {
 						value[GRIDIRON_TYPE] = true;
@@ -166,7 +154,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 					else if (activityMessage.includes("Champ de bataille souterrain")) {
 						value[GRIDIRON_TYPE] = true;
@@ -175,7 +162,6 @@ module.exports = {
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
-
 					}
 				}
 			});
@@ -191,7 +177,7 @@ module.exports = {
 			if (userName) {
 				message.author.send(
 					'Username: ' + userName + '\n' +
-					'Server: ' + server + '\n' +
+					'Server: ' + isEUServer ? 'Europe' : 'Not EUROPE' + '\n' +
 					'Discord tag: ' + userTag + '\n' +
 					'Discord server: ' + guildName + '\n'
 				);
