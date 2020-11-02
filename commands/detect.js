@@ -27,8 +27,11 @@ module.exports = {
 		// Search inside all presences of all the guilds with the bot.
 		client.guilds.cache.forEach((guild) => {
 			if (!guild || !guild.presences) return;
-			console.log('coucou2');
 			guild.presences.cache.array().forEach(presence => {
+				console.log(presence.activities[0].name === "TERA");
+				console.log(presence.activities.length);
+				console.log(presence.activities[0].assets);
+				console.log(presence.activities[0].assets.largeText)
 				if (presence.activities.length > 0 && presence.activities[0].name === "TERA" && presence.activities[0].assets && presence.activities[0].assets.largeText){
 					console.log('coucou3');
 					if (!presence.activities[0].assets.smallText) {
