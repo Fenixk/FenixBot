@@ -33,7 +33,6 @@ module.exports = {
 					if (!isEUServer) {
 						return;
 					}
-					if (message) message.author.send(activityMessage);
 
 					if (activityMessage.includes("Твердыня корсаров")) {
 						value[CORSAIR_TYPE] = true;
