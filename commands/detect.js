@@ -74,7 +74,7 @@ module.exports = {
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
 					}
-					else if (activityMessage.includes("Битва на побережье (RU)")) {
+					else if (activityMessage.includes("Битва на побережье")) {
 						value[SHORE_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
@@ -99,7 +99,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 					}
 					else if (activityMessage.includes("Champions' Skyring")) {
-						value[SKYRING_TYPE] = true;
+						value[SKYRING_TYPE] = false;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -107,7 +107,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 					}
 					else if (activityMessage.includes("Cercle céleste des Champions")) {
-						value[SKYRING_TYPE] = true;
+						value[SKYRING_TYPE] = false;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -115,22 +115,22 @@ module.exports = {
 						assets = presence.activities[0].assets;
 					}
 					else if (activityMessage.includes("Himmelsring der Helden")) {
-						value[SKYRING_TYPE] = true;
+						value[SKYRING_TYPE] = false;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
 					}
-					else if (activityMessage.includes("Небесная Арена (RU)")) {
-						value[SKYRING_TYPE] = true;
+					else if (activityMessage.includes("Небесная Арена")) {
+						value[SKYRING_TYPE] = false;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
 					}
-					else if (activityMessage.includes("Подземная арена (RU)")) {
+					else if (activityMessage.includes("Подземная арена")) {
 						value[GRIDIRON_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
