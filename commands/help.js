@@ -16,7 +16,7 @@ module.exports = {
 			"Here are the commands Administrators can do : \n\n" +
 			"- **!init _#MyChannelName_** : To change the channel where the Battleground notifications and Battleground status are sent.\n" +
 			"- **!lang _fr/de/en/ru_** : To change the bot message language and time zone.\n" +
-			"- **!lang _fr/de/en/ru** : To change the bot message language and time zone.\n" +
+			"- **!bg-role _@roleName_** : To change the @here to @role inside the bot messages, default is @here.\n" +
 			"- **!notif _on_** or **!notif _off_** : To enable or disabled battleground notifications on your server. Does not affect battleground status update.\n\n" +
 			"Here are the commands Organizers can do : \n\n" +
 			"- **!pop _bgName_** :	To make Battleground announcement for all servers.\n" +

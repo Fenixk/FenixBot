@@ -23,9 +23,9 @@ const bgDescriptor = {
 	[GRIDIRON_TYPE]: {
 		image: "https://cdn.glitch.com/cbdc508c-c599-4570-a02a-93ea04cd50ac%2Fgridiron.jpg?v=1592260942453",
 		players: {
-			green: "20/20",
-			orange: "??/20",
-			red: "0/20"
+			green: "10/10",
+			orange: "??/10",
+			red: "0/10"
 		},
 		timer: 60 
 	},
@@ -67,9 +67,9 @@ const bgDescriptor = {
 			footer: "Gridiron is a PvP instance where players fight hard in a 10v10 arena."
 		},
 		[SKYRING_TYPE]: {
-			title: "Champion's Skyring",
+			title: "Champion's Skyring (Team)",
 			description: {
-				green: "Champion's Skyring is currently popping 👑 !",
+				green: "Champion's Skyring (Team) is currently popping 👑 !",
 				orange: "Unknown Status. Check with Tera PvP EU moderators !",
 				red: "Not popping."
 			},
