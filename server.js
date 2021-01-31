@@ -26,7 +26,7 @@ const listener = app.listen(process.env.PORT, () => {
 // Bot Options
 const discordId = process.env.DISCORD;
 const { prefix, allowedRoles } = require('./config.json');
-const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE } = require('./constants/battleground-types.js');
+const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE, FRAYWIND_TYPE } = require('./constants/battleground-types.js');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -47,25 +47,28 @@ let orangeTimer = {
 			[CORSAIR_TYPE]: true,
 			[SHORE_TYPE]: true,
 			[GRIDIRON_TYPE]: true,
-			[SKYRING_TYPE]: true
+			[SKYRING_TYPE]: true,
+			[FRAYWIND_TYPE]: true,
 }
 let redTimer = {
 			[CORSAIR_TYPE]: true,
 			[SHORE_TYPE]: true,
 			[GRIDIRON_TYPE]: true,
-			[SKYRING_TYPE]: true
+			[SKYRING_TYPE]: true,
+			[FRAYWIND_TYPE]: true,
 }
 let retry = {
 	[CORSAIR_TYPE]: true,
 	[SHORE_TYPE]: true,
 	[GRIDIRON_TYPE]: true,
-	[SKYRING_TYPE]: true
+	[SKYRING_TYPE]: true,
+	[FRAYWIND_TYPE]: true,
 };
 
 // Automatic Detection for Discord Game Activity every 2 minutes.
 setInterval(() => { 
 	const [values, userName] = client.commands.get('detect').execute(client); 
-	const bgTypes = [CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE];
+	const bgTypes = [CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE, FRAYWIND_TYPE];
 
 	bgTypes.forEach(bgType => {
 			if (values[bgType] && retry[bgType]) { 

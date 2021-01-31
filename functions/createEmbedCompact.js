@@ -1,5 +1,5 @@
 const statusDescription = require('../constants/status-descriptors');
-const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE } = require('../constants/battleground-types.js');
+const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE, FRAYWIND_TYPE } = require('../constants/battleground-types.js');
 const Discord = require('discord.js');
 const { UTC } = require('../config.json');
 
@@ -24,6 +24,8 @@ const createEmbedCompact = (status, language) => {
 			{ name: state.battleground, value: state.skyring, inline: true },
 			{ name: state.status, value: ':' + status[SKYRING_TYPE] + '_circle:', inline: true },
 			{ name: state.last, value: translateDate(status['last' + SKYRING_TYPE], language), inline: true },
+			{ name: state.status, value: ':' + status[FRAYWIND_TYPE] + '_circle:', inline: true },
+			{ name: state.last, value: translateDate(status['last' + FRAYWIND_TYPE], language), inline: true }
 		)
 		.setTimestamp(new Date())
 		.setFooter(state.footer);

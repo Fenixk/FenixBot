@@ -1,4 +1,4 @@
-const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE } = require('./battleground-types.js');
+const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE, FRAYWIND_TYPE } = require('./battleground-types.js');
 
 const bgDescriptor = {
 	url: 'https://discord.gg/UTuDSMk',
@@ -35,6 +35,15 @@ const bgDescriptor = {
 			green: "6/6",
 			orange: "?/6",
 			red: "0/6"
+		},
+		timer: 60
+	},
+	[FRAYWIND_TYPE]: {
+		image: "https://i.ibb.co/5G8Gdnh/fwc.jpg",
+		players: {
+			green: "30/30",
+			orange: "?/30",
+			red: "0/30"
 		},
 		timer: 60
 	},
@@ -75,6 +84,15 @@ const bgDescriptor = {
 			},
 			footer: "Champion' Skyring is a PvP instance where the best fight happens !!"
 		}, 
+		[FRAYWIND_TYPE]: {
+			title: "Fraywind Canyon",
+			description: {
+				green: "Fraywind Canyon is currently popping 🌋 !",
+				orange: "Unknown Status. Check with Tera PvP EU moderators !",
+				red: "Not popping."
+			},
+			footer: "Fraywind Canyon is a PvP instance where players fight for pyres !!"
+		}
 	},
 	fr: {
 		[CORSAIR_TYPE]: {
@@ -112,6 +130,15 @@ const bgDescriptor = {
 				red: "Aucun en cours."
 			},
 			footer: "Cercle Céleste des Champions est une instance PvP de haut niveau !!"
+		},
+		[FRAYWIND_TYPE]: {
+			title: "Gorge Venteguerre",
+			description: {
+				green: "Gorge Venteguerre est actuellement en cours 🌋 !",
+				orange: "Status inconnu. Demander aux modérateurs sur Tera PvP EU !",
+				red: "Aucun en cours."
+			},
+			footer: "Gorge Venteguerre est une instance PvP où 15 joueurs s'affrontent !!"
 		}
 	},
 	ru: {
@@ -150,7 +177,16 @@ const bgDescriptor = {
 				red: "Не запущена."
 			},
 			footer: "Небесная арена это пвп арена, где происходят лучшие бои!!"
-		}, 
+		},
+		[FRAYWIND_TYPE]: {
+			title: "Каньон фрейвинд",
+			description: {
+				green: "Каньон фрейвинд запущена 🌋 !",
+				orange: "Неизвестный статус. Проверьте вместе с Tera PVP EU модераторами!",
+				red: "Не запущена."
+			},
+			footer: "Каньон Фрейвинд это пвп арена, где игроки деруться за костры"
+		}
 	},
 	de: {
 		[CORSAIR_TYPE]: {
@@ -189,6 +225,15 @@ const bgDescriptor = {
 			},
 			footer: "Im Himmelsring der Helden finden die besten PvP Kämpfe statt !"
 		}, 
+		[FRAYWIND_TYPE]: {
+			title: "Canyon der Ehre",
+			description: {
+				green: "Canyon der Ehre wird momentan gespielt 🌋 !",
+				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
+				red: "Momentan nicht gespielt."
+			},
+			footer: "Im Canyon der Ehre kämpfen die Spieler um Punkte !! "
+		}
 	},
 }
 

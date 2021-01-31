@@ -11,7 +11,8 @@ const statusDescriptors = {
 		corsair: 'Corsair Stronghold',
 		shore: 'Shore hold',
 		gridiron: 'Gridiron',
-		skyring: "Champion's Skyring"
+		skyring: "Champion's Skyring",
+		fraywind: "Fraywind Canyon"
 	},
 	fr: {
 		title: 'Activité des champs de bataille',
@@ -24,7 +25,8 @@ const statusDescriptors = {
 		corsair: 'Fort des corsaire',
 		shore: 'Territoire côtier',
 		gridiron: 'Bataille souterrain',
-		skyring: "Cercle céleste champions"
+		skyring: "Cercle céleste champions",
+		fraywind: "Gorge Venteguerre"
 	},
 	ru: {
 		title: 'Активность арен',
@@ -37,7 +39,8 @@ const statusDescriptors = {
 		corsair: 'Твердыня корсаров',
 		shore: 'Битва на побережье',
 		gridiron: 'Подземная арена',
-		skyring: "Небесная арена"
+		skyring: "Небесная арена",
+		fraywind: "Каньон фрейвинд"
 	},
 	de: {
 		title: 'Schlachtgruppen Aktivität',
@@ -50,7 +53,8 @@ const statusDescriptors = {
 		corsair: 'Korsarenfestung',
 		shore: 'Küstenterritorium',
 		gridiron: 'Unterirdisches Schlachtfeld',
-		skyring: "Himmelsring der Helden"
+		skyring: "Himmelsring der Helden",
+		fraywind: "Canyon der Ehre"
 	},
 }
 

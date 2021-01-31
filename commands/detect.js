@@ -1,4 +1,4 @@
-const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE } = require('../constants/battleground-types.js');
+const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE, FRAYWIND_TYPE } = require('../constants/battleground-types.js');
 
 module.exports = {
 	name: 'detect',
@@ -13,6 +13,7 @@ module.exports = {
 			[SHORE_TYPE]: false,
 			[GRIDIRON_TYPE]: false,
 			[SKYRING_TYPE]: false,
+			[FRAYWIND_TYPE]: false
 		};
 
 		let userName = '';
@@ -162,6 +163,38 @@ module.exports = {
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
 					}
+					else if (activityMessage.includes("Fraywind")) {
+						value[FRAYWIND_TYPE] = true;
+						userName = presence.user.username;
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+					}
+					else if (activityMessage.includes("фрейвинд")) {
+						value[FRAYWIND_TYPE] = true;
+						userName = presence.user.username;
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+					}
+					else if (activityMessage.includes("Venteguerre")) {
+						value[FRAYWIND_TYPE] = true;
+						userName = presence.user.username;
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+					}
+					else if (activityMessage.includes("Canon der Ehre")) {
+						value[FRAYWIND_TYPE] = true;
+						userName = presence.user.username;
+						userTag = presence.user.tag;
+						guildName = presence.guild.name;
+						activity = presence.activities[0];
+						assets = presence.activities[0].assets;
+					}
 				}
 			});
 		});
@@ -170,7 +203,8 @@ module.exports = {
 				'Corsair: ' + JSON.stringify(value[CORSAIR_TYPE]) + '\n' +
 				'Shore: ' + JSON.stringify(value[SHORE_TYPE]) + '\n' +
 				'Gridiron: ' + JSON.stringify(value[GRIDIRON_TYPE]) + '\n' +
-				'Skyring: ' + JSON.stringify(value[SKYRING_TYPE]) + '\n'
+				'Skyring: ' + JSON.stringify(value[SKYRING_TYPE]) + '\n' +
+				'Fraywind: ' + JSON.stringify(value[FRAYWIND_TYPE]) + '\n'
 			);
 
 			if (userName) {

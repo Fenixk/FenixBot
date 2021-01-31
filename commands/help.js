@@ -21,7 +21,7 @@ module.exports = {
 			"Here are the commands Organizers can do : \n\n" +
 			"- **!pop _bgName_** :	To make Battleground announcement for all servers.\n" +
 			"- **!cancel _bgName_** : To remove Battleground announcement for all servers.\n\n" +
-			"List of all availaible **bgName**: corsair-stronghold, coco, corsair, cs, shore-hold, shore, sh, gridiron, gridi, gr, champion-skyring, skyring, 3v3, 3s.\n\n" +
+			"List of all availaible **bgName**: corsair-stronghold, coco, corsair, cs, shore-hold, shore, sh, gridiron, gridi, gr, champion-skyring, skyring, 3v3, 3s, fraywind, fraywind-canyon, fwc.\n\n" +
 			"**Restrictions:**\n" +
 			"• Only members with 'Organizer' role from Tera PvP EU discords are authorized to make announcement.\n" +
 			"• Organizer commands work only on 'Tera PvP EU' discord'.\n" +

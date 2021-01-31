@@ -9,6 +9,7 @@
 	"shoreAliases": ["shore", "sh", "shore-hold"],
 	"gridironAliases": ["gridiron", "gridi", "battle arena", "gr"],
 	"skyringAliases": ["skyring", "champion-skyring", "3v3", "3s", "3c3", "3vs3", "sky"],
+	"fraywindAliases": ["fraywind", "fwc", "fraywind-canyon", "canyon", "venteguerre"],
 	"frenchAliases": ["fr", "french", "français", "francais", "france"],
 	"englishAliases": ["en", "english", "us", "usa", "american", "england", "british"],
 	"russianAliases": ["ru", "russian", "russia", "русский", "Россия"],
