@@ -39,7 +39,7 @@ const bgDescriptor = {
 		timer: 60
 	},
 	[FRAYWIND_TYPE]: {
-		image: "https://i.ibb.co/5G8Gdnh/fwc.jpg",
+		image: "https://i.ibb.co/3RrJP1p/fwc.jpg",
 		players: {
 			green: "30/30",
 			orange: "?/30",
