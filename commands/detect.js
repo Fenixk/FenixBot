@@ -100,7 +100,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 					}
 					else if (activityMessage.includes("Champions' Skyring")) {
-						value[SKYRING_TYPE] = false;
+						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -108,7 +108,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 					}
 					else if (activityMessage.includes("Cercle céleste des Champions")) {
-						value[SKYRING_TYPE] = false;
+						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -116,7 +116,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 					}
 					else if (activityMessage.includes("Himmelsring der Helden")) {
-						value[SKYRING_TYPE] = false;
+						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -124,7 +124,7 @@ module.exports = {
 						assets = presence.activities[0].assets;
 					}
 					else if (activityMessage.includes("Небесная Арена")) {
-						value[SKYRING_TYPE] = false;
+						value[SKYRING_TYPE] = true;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -210,7 +210,6 @@ module.exports = {
 			if (userName) {
 				message.author.send(
 					'Username: ' + userName + '\n' +
-					'Server: ' + isEUServer ? 'Europe' : 'Not EUROPE' + '\n' +
 					'Discord tag: ' + userTag + '\n' +
 					'Discord server: ' + guildName + '\n'
 				);
