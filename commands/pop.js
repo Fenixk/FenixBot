@@ -1,5 +1,6 @@
 const updateAllStatus = require('../functions/updateAllStatus.js');
 const sendAllNotifications = require('../functions/sendAllNotifications.js');
+const updateAllNotifications = require('../functions/updateAllNotifications.js');
 const { sleepStartTime, sleepEndTime } = require('../config.json');
 
 module.exports = {
