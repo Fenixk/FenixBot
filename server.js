@@ -74,12 +74,12 @@ setInterval(() => {
 			if (values[bgType] && retry[bgType]) { 
 				console.log('Auto Detection: Entering into ' + bgType);
 				retry[bgType] = false;
-				// client.commands.get('pop').execute(client, null, bgType, userNames[bgType]);
+				client.commands.get('pop').execute(client, null, bgType, userNames[bgType]);
 				createTimer(bgType, 30*60);
 			}
 			else if (!values[bgType] && !retry[bgType]) {
 				console.log('Auto Detection: Leaving ' + bgType);
-				// client.commands.get('pop').execute(client, null, bgType, userNames[bgType]);
+				client.commands.get('pop').execute(client, null, bgType, userNames[bgType]);
 				createTimer(bgType, 30*60);
 				retry[bgType] = true;
 			}
