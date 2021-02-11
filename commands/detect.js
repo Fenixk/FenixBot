@@ -265,7 +265,7 @@ module.exports = {
 
 			if (userName) {
 				message.author.send(
-					 JSON.stringify(userNames) + 
+					 JSON.stringify(userNames) +  '\n' +
 					'Discord tag: ' + userTag + '\n' +
 					'Discord server: ' + guildName + '\n'
 				);
