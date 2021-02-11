@@ -28,6 +28,9 @@ const sendNotification = (channel, bgType, guild, language, roleId, userName = '
 	channel.messages.fetch({ limit: 100 }).then(messages => {
 		botMessages = messages.filter(msg => msg.author.bot);
 		if (botMessages.array().length > 0){
+			if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === bgDescriptors[language][bgType].title) {
+				exist = true;
+			}
 			// Find the good Embed.
 			for (let i=0; i < botMessages.array().length; i++){
 				if (botMessages.array()[i].embeds[0] && (
