@@ -27,11 +27,15 @@ const sendNotification = (channel, bgType, guild, language, roleId, userName = '
 	channel.messages.fetch({ limit: 100 }).then(messages => {
 		console.log("ok-1");
 		botMessages = messages.filter(msg => msg.author.bot);
+		console.log(botMessages.array().length);
 		if (botMessages.array().length > 0) {
+			console.log("ok-2");
 			if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === bgDescriptors[language][bgType].title) {
+				console.log("ok-3");
 				botMessages.array()[i].edit(announceEmbed)
 				.then(res => console.log('Update Notification for ' + guild))
 				.catch(err => console.log('Failed to edit embed for SEND NOTIFICATION in ' + guild));
+				console.log("ok-4");
 				exist = true;
 				console.log("ok0");
 			}
