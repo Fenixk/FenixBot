@@ -21,27 +21,18 @@ const sendNotification = (channel, bgType, guild, language, roleId, userName = '
 	if (userName !== ''){
 		userMessage = ' Thanks ' + userName + ' !';
 	}
-	console.log("ok");
+
 	const announceEmbed = createEmbed(bgType, 'green', language);
 	const announceMessage = "Hello " + roleString + ", **__" + bgType.charAt(0).toUpperCase() + bgType.slice(1) + "__** is currently popping !" + userMessage;
 	channel.messages.fetch({ limit: 100 }).then(messages => {
-		console.log("ok-1");
 		botMessages = messages.filter(msg => msg.author.bot);
 		console.log(botMessages.array().length);
 		if (botMessages.array().length > 0) {
-			console.log("ok-2");
-			if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === bgDescriptors[language][bgType].title) {
-				console.log("ok-3");
-				botMessages.array()[i].edit(announceEmbed)
-				.then(res => console.log('Update Notification for ' + guild))
-				.catch(err => console.log('Failed to edit embed for SEND NOTIFICATION in ' + guild));
-				console.log("ok-4");
-				exist = true;
-				console.log("ok0");
-			}
-			console.log("ok1");
 			// Find the good Embed.
 			for (let i=0; i < botMessages.array().length; i++){
+				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === bgDescriptors[language][bgType].title) {
+					exist = true;
+				}
 				if (botMessages.array()[i].embeds[0] && (
 					botMessages.array()[i].embeds[0].title === statusDescriptors.fr.title || 
 					botMessages.array()[i].embeds[0].title === statusDescriptors.en.title || 
