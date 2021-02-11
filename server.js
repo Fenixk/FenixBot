@@ -23,6 +23,8 @@ const listener = app.listen(process.env.PORT, () => {
 	console.log("Your app is listening on port " + listener.address().port);
 });
 
+return;
+
 // Bot Options
 const discordId = process.env.DISCORD;
 const { prefix, allowedRoles } = require('./config.json');
@@ -67,24 +69,24 @@ let retry = {
 
 // Automatic Detection for Discord Game Activity every 2 minutes.
 setInterval(() => { 
-	const [values, userName] = client.commands.get('detect').execute(client); 
+	const [values, userNames] = client.commands.get('detect').execute(client); 
 	const bgTypes = [CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE, FRAYWIND_TYPE];
 
 	bgTypes.forEach(bgType => {
 			if (values[bgType] && retry[bgType]) { 
 				console.log('Auto Detection: Entering into ' + bgType);
 				retry[bgType] = false;
-				client.commands.get('pop').execute(client, null, bgType, userName);
+				client.commands.get('pop').execute(client, null, bgType, userNames[bgType]);
 				createTimer(bgType, 30*60);
 			}
 			else if (!values[bgType] && !retry[bgType]) {
 				console.log('Auto Detection: Leaving ' + bgType);
-				client.commands.get('pop').execute(client, null, bgType, userName);
+				client.commands.get('pop').execute(client, null, bgType, userNames[bgType]);
 				createTimer(bgType, 30*60);
 				retry[bgType] = true;
 			}
 			else if (values[bgType]) {
-				console.log('Auto Detection: ' + bgType + ' is currently popping');
+				console.log('Auto Detection: ' + bgType + ' is currently popping, sent by ' + userNames[bgType]);
 			}		
 	})
 }, 2*60*1000);

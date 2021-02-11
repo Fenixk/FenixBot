@@ -16,6 +16,13 @@ module.exports = {
 			[FRAYWIND_TYPE]: false
 		};
 
+		let userNames = {
+			[CORSAIR_TYPE]: '',
+			[SHORE_TYPE]: '',
+			[GRIDIRON_TYPE]: '',
+			[SKYRING_TYPE]: '',
+			[FRAYWIND_TYPE]: ''		
+		};
 		let userName = '';
 		let userTag = '';
 		let activity = '';
@@ -37,6 +44,7 @@ module.exports = {
 
 					if (activityMessage.includes("Твердыня корсаров")) {
 						value[CORSAIR_TYPE] = true;
+						userNames[CORSAIR_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -45,6 +53,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Corsairs' Stronghold")) {
 						value[CORSAIR_TYPE] = true;
+						userNames[CORSAIR_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -53,6 +62,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Fort des Corsaires")) {
 						value[CORSAIR_TYPE] = true;
+						userNames[CORSAIR_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -61,6 +71,7 @@ module.exports = {
 					}    
 					else if (activityMessage.includes("Korsarenfestung")) {
 						value[CORSAIR_TYPE] = true;
+						userNames[CORSAIR_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -69,6 +80,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Shore Hold")) {
 						value[SHORE_TYPE] = true;
+						userNames[SHORE_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -77,6 +89,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Битва на побережье")) {
 						value[SHORE_TYPE] = true;
+						userNames[SHORE_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -85,6 +98,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Territoire côtier")) {
 						value[SHORE_TYPE] = true;
+						userNames[SHORE_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -93,6 +107,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Küstenterritorium")) {
 						value[SHORE_TYPE] = true;
+						userNames[SHORE_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -101,6 +116,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Champions' Skyring")) {
 						value[SKYRING_TYPE] = true;
+						userNames[SKYRING_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -109,6 +125,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Cercle céleste des Champions")) {
 						value[SKYRING_TYPE] = true;
+						userNames[SKYRING_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -117,6 +134,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Himmelsring der Helden")) {
 						value[SKYRING_TYPE] = true;
+						userNames[SKYRING_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -125,6 +143,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Небесная Арена")) {
 						value[SKYRING_TYPE] = true;
+						userNames[SKYRING_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -133,6 +152,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Подземная арена")) {
 						value[GRIDIRON_TYPE] = false;
+						userNames[GRIDIRON_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -148,6 +168,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Gridiron")) {
 						value[GRIDIRON_TYPE] = false;
+						userNames[GRIDIRON_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -164,6 +185,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Unterirdisches Schlachtfeld")) {
 						value[GRIDIRON_TYPE] = false;
+						userNames[GRIDIRON_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -179,6 +201,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Champ de bataille souterrain")) {
 						value[GRIDIRON_TYPE] = false;
+						userNames[GRIDIRON_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -194,6 +217,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Fraywind")) {
 						value[FRAYWIND_TYPE] = true;
+						userNames[FRAYWIND_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -202,6 +226,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("фрейвинд")) {
 						value[FRAYWIND_TYPE] = true;
+						userNames[FRAYWIND_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -210,6 +235,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Venteguerre")) {
 						value[FRAYWIND_TYPE] = true;
+						userNames[FRAYWIND_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -218,6 +244,7 @@ module.exports = {
 					}
 					else if (activityMessage.includes("Canon der Ehre")) {
 						value[FRAYWIND_TYPE] = true;
+						userNames[FRAYWIND_TYPE] = presence.user.username;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
@@ -238,7 +265,7 @@ module.exports = {
 
 			if (userName) {
 				message.author.send(
-					'Username: ' + userName + '\n' +
+					 JSON.stringify(userNames) + 
 					'Discord tag: ' + userTag + '\n' +
 					'Discord server: ' + guildName + '\n'
 				);
@@ -250,6 +277,6 @@ module.exports = {
 			}
 		}
 
-		return [value, userName];
+		return [value, userNames];
 	}
 };
