@@ -132,36 +132,57 @@ module.exports = {
 						assets = presence.activities[0].assets;
 					}
 					else if (activityMessage.includes("Подземная арена")) {
-						value[GRIDIRON_TYPE] = true;
+						value[GRIDIRON_TYPE] = false;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
+						message.author.send(
+							'Username: ' + userName + '\n' +
+							'Discord tag: ' + userTag + '\n' +
+							'Discord server: ' + guildName + '\n'
+						);
 					}
 					else if (activityMessage.includes("Gridiron")) {
-						value[GRIDIRON_TYPE] = true;
+						value[GRIDIRON_TYPE] = false;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
+						message.author.send(
+							'Username: ' + userName + '\n' +
+							'Discord tag: ' + userTag + '\n' +
+							'Discord server: ' + guildName + '\n'
+						);
+						
 					}
 					else if (activityMessage.includes("Unterirdisches Schlachtfeld")) {
-						value[GRIDIRON_TYPE] = true;
+						value[GRIDIRON_TYPE] = false;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
+						message.author.send(
+							'Username: ' + userName + '\n' +
+							'Discord tag: ' + userTag + '\n' +
+							'Discord server: ' + guildName + '\n'
+						);
 					}
 					else if (activityMessage.includes("Champ de bataille souterrain")) {
-						value[GRIDIRON_TYPE] = true;
+						value[GRIDIRON_TYPE] = false;
 						userName = presence.user.username;
 						userTag = presence.user.tag;
 						guildName = presence.guild.name;
 						activity = presence.activities[0];
 						assets = presence.activities[0].assets;
+						message.author.send(
+							'Username: ' + userName + '\n' +
+							'Discord tag: ' + userTag + '\n' +
+							'Discord server: ' + guildName + '\n'
+						);
 					}
 					else if (activityMessage.includes("Fraywind")) {
 						value[FRAYWIND_TYPE] = true;
