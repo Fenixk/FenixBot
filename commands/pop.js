@@ -1,7 +1,7 @@
 const updateAllStatus = require('../functions/updateAllStatus.js');
 const sendAllNotifications = require('../functions/sendAllNotifications.js');
 const updateAllNotifications = require('../functions/updateAllNotifications.js');
-const { sleepStartTime, sleepEndTime } = require('../config.json');
+const { sleepStartTime, sleepEndTime, UTC } = require('../config.json');
 
 module.exports = {
 	name: 'pop',
@@ -15,11 +15,11 @@ module.exports = {
 		updateAllStatus(client, bgType, 'green');
 		updateAllNotifications(client, bgType, 'green');
 		if (!isMessageDuringSleepHour()) sendAllNotifications(client, bgType, userName);
-		if (isMessageDuringSleepHour() && message) message.reply("ZzzZzZ, I'm sleeping between 1h00 and 10h00. However I'll update status. Good night.")
+		if (isMessageDuringSleepHour() && message) message.reply("ZzzZzZ, I'm sleeping between "+ sleepStartTime + UTC.eu + "h00 and " + sleepEndTime + UTC.eu + "h00. However I'll update status. Good night.")
 	}
 };
 
 const isMessageDuringSleepHour = () => {
 	const currentTime = new Date(Date.now()).getHours();
-	return (currentTime >= sleepStartTime && currentTime < sleepEndTime);
+	return (currentTime >= (sleepStartTime + UTC.eu) && currentTime < (sleepEndTime + UTC.eu));
 }

@@ -1,8 +1,8 @@
 {
 	"prefix": "!",
-	"UTC": { "en": 1, "fr": 1, "de": 1, "ru": 3 },
-	"sleepStartTime": 1,
-	"sleepEndTime": 10,
+	"UTC": { "en": 1, "fr": 1, "de": 1, "ru": 3, "eu": 1 },
+	"sleepStartTime": 0,
+	"sleepEndTime": 9,
 	"serverName": ["Seren", "Mystel", "Yurian", "Shakan"],
 	"allowedRoles": ["Organizer", "Organizers", "Mod", "Mods", "Admin", "Co-Admin"],
 	"corsairAliases": ["corsair", "cs", "coco", "corsair-stronghold"],

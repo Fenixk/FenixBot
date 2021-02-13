@@ -4,8 +4,8 @@ const Guilds = require('../schemas/Guilds.schema.js');
 const sendAllNotification = (client, bgType, userName) => {
 	client.guilds.cache.forEach((guild) => {
 		Guilds.findOne({ guildId: guild.id }).then(res => {
-			if (!res) return console.log('Failed to find guild in database in sendAllNotification related to ' + guild.name);
-			if (!res.notification) return console.log('Notifications are disabled for ' + res.guildName);
+			if (!res) return;
+			if (!res.notification) return;
 			else {
 				let channels = guild.channels.cache.filter((channel) => { return (channel.id === res.channelId); }).array();
 				if (channels && channels.length > 0) {

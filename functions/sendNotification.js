@@ -26,7 +26,6 @@ const sendNotification = (channel, bgType, guild, language, roleId, userName = '
 	const announceMessage = "Hello " + roleString + ", **__" + bgType.charAt(0).toUpperCase() + bgType.slice(1) + "__** is currently popping !" + userMessage;
 	channel.messages.fetch({ limit: 100 }).then(messages => {
 		botMessages = messages.filter(msg => msg.author.bot);
-		console.log(botMessages.array().length);
 		if (botMessages.array().length > 0) {
 			// Find the good Embed.
 			for (let i=0; i < botMessages.array().length; i++){
@@ -39,13 +38,10 @@ const sendNotification = (channel, bgType, guild, language, roleId, userName = '
 					botMessages.array()[i].embeds[0].title === statusDescriptors.ru.title || 
 					botMessages.array()[i].embeds[0].title === statusDescriptors.de.title )) {
 					statusExist = true;
-					console.log("ok2");
 				}
 			}
 		}
-		console.log("ok3");
 		if (statusExist === false) {
-			console.log("ok4");
 			console.log('Send Status because not exist in ' + guild);
 			Status.findOne({ id: "1" }).then(status => {
 				const statusEmbed = createEmbedCompact(status, language);
@@ -53,7 +49,6 @@ const sendNotification = (channel, bgType, guild, language, roleId, userName = '
 			});
 		}
 		if (exist === false) {
-			console.log("ok5");
 			console.log('Send ' + bgType + ' notification to ' + guild);
 			setTimeout(() => channel.send(announceMessage, announceEmbed), 1000);
 		}
