@@ -15,7 +15,7 @@ module.exports = {
 		updateAllStatus(client, bgType, 'green');
 		updateAllNotifications(client, bgType, 'green');
 		if (!isMessageDuringSleepHour()) sendAllNotifications(client, bgType, userName);
-		if (isMessageDuringSleepHour() && message) message.reply("ZzzZzZ, I'm sleeping between "+ sleepStartTime + UTC.eu + "h00 and " + sleepEndTime + UTC.eu + "h00. However I'll update status. Good night.")
+		if (isMessageDuringSleepHour() && message) message.reply("ZzzZzZ, I'm sleeping between " + (sleepStartTime + UTC.eu) + "h00 and " + (sleepEndTime + UTC.eu) + "h00. However I'll update status. Good night.")
 	}
 };
 
