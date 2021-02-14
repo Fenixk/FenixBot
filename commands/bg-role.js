@@ -26,15 +26,11 @@ module.exports = {
 		if (args[0].startsWith('<@&')){
 			bgRole = args[0].substring(3, args[0].length-1);
 		}
+		
+		role = message.guild.roles.cache.find(x => x.name == bgRole || x.id == bgRole);
+		
 
-		isOff = (bgRole === "hide" || bgRole === "nothing" || bgRole === "off" || bgRole === "false");
-		if (isOff) {
-			role = '';
-		} else {
-			role = message.guild.roles.cache.find(x => x.name == bgRole || x.id == bgRole);
-		}
-
-
+		isOff = (bgRole === "off");
 		if(!role && !isOff) {
 			return message.reply('The role **' + bgRole + '** does not exist. Please use an existing one.');
 		}
@@ -42,7 +38,7 @@ module.exports = {
 			const data = {
 				guildId: message.guild.id,
 				guildName: message.guild.name,
-				role: role.id
+				role: isOff ? "off" : role.id
 			}
 	
 			Guilds.findOneAndUpdate({ guildId: message.guild.id }, data).then().catch(err => console.log(err.message));

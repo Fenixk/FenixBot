@@ -14,6 +14,9 @@ const sendNotification = (channel, bgType, guild, language, roleId, userName = '
 	if (!roleId || roleId === 'here' || roleId === '@here') {
 		roleString = "@here";
 	}
+	else if (roleId === 'off') {
+		roleString = "";
+	}
 	else {
 		roleString = "<@&" + roleId + ">";
 	}
