@@ -2,7 +2,7 @@ const updateNotifications = require("../functions/updateNotifications.js");
 const Guilds = require('../schemas/Guilds.schema.js');
 const Status = require('../schemas/Status.schema.js');
 
-const updateAllNotifications = (client, bgType, color) => {
+const updateAllNotifications = (client, bgType, color, userName) => {
 
 	Status.findOne({ id: "1" }).then(status => {
 		let updateTime;
@@ -17,7 +17,7 @@ const updateAllNotifications = (client, bgType, color) => {
 					if (channels && channels.length > 0) {
 						channels = channels.sort((a, b) => { return a.calculatedPosition - b.calculatedPosition;}); 
 						if (channels[0].permissionsFor(guild.me).has(["SEND_MESSAGES"]))
-							updateNotifications(channels[0], bgType, res.language, color, updateTime);
+							updateNotifications(channels[0], bgType, res.language, color, updateTime, res.role, userName);
 					}
 					else return;
 				}
