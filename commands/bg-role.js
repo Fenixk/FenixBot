@@ -27,6 +27,7 @@ module.exports = {
 			bgRole = args[0].substring(3, args[0].length-1);
 		}
 
+		console.log(bgRole);
 		isOff = (bgRole === "hide" || bgRole === "nothing" || bgRole === "off" || bgRole === "false");
 		if (isOff) {
 			role = '';
