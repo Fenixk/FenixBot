@@ -3,9 +3,6 @@ const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE, FRAYWIND_TYPE } =
 module.exports = {
 	name: 'detect',
 	description: 'Trigger the BGs automatic detection and send result to the author.',
-	guildOnly: false,
-	roleOnly: false,
-	adminOnly: false,
 	aliases: ['detect', 'search', 'info'],
 	execute(client, message) {
 		let value = {
@@ -208,7 +205,9 @@ module.exports = {
 				"	- Server: " +  guildNames[SKYRING_TYPE])) +
 				'\n\n' +
 				"Good bye ! :crossed_swords:"
-			);
+			)
+			.then()
+			.catch(e => console.log('Failed to send battleground detection information to ' + message.member.user.username));
 		}
 
 		return [value, userNames];

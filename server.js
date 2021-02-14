@@ -79,8 +79,8 @@ setInterval(() => {
 			}
 			else if (!values[bgType] && !retry[bgType]) {
 				console.log('Auto Detection: Leaving ' + bgType);
-				client.commands.get('pop').execute(client, null, bgType, userNames[bgType]);
-				createTimer(bgType, 30*60);
+				// client.commands.get('pop').execute(client, null, bgType, userNames[bgType]);
+				// createTimer(bgType, 30*60);
 				retry[bgType] = true;
 			}
 			else if (values[bgType]) {
