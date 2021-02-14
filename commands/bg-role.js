@@ -27,7 +27,6 @@ module.exports = {
 			bgRole = args[0].substring(3, args[0].length-1);
 		}
 
-		console.log(bgRole);
 		isOff = (bgRole === "hide" || bgRole === "nothing" || bgRole === "off" || bgRole === "false");
 		if (isOff) {
 			role = '';
@@ -36,7 +35,7 @@ module.exports = {
 		}
 
 
-		if(!role) {
+		if(!role && !isOff) {
 			return message.reply('The role **' + bgRole + '** does not exist. Please use an existing one.');
 		}
 		else {
