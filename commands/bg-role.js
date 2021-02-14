@@ -8,7 +8,7 @@ module.exports = {
 	adminOnly: true,
 	aliases: ['bg-role'],
 	execute(client, message, bgType, args) {
-		let bgRole = 'here';
+		let bgRole;
 		let role;
 		let isOff;
 
