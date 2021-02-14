@@ -179,25 +179,29 @@ module.exports = {
 		if (message) {
 			message.author.send(
 				"Here is the result of the automatic battleground detection : \n\n" +
-				'**• Corsair Stronghold**: ' + !value[CORSAIR_TYPE] ? "Not detected :red_circle:" : ('\n' +
+				!value[CORSAIR_TYPE] ? '**• Corsair Stronghold**: Not detected :red_circle:' : (
+				'**• Corsair Stronghold**: Not detected :red_circle:' + '\n' +
 				"	- Status: " + "Popping :green_circle:" + '\n' +
 				"	- Username: " +  userNames[CORSAIR_TYPE] + '\n' +
 				"	- Usertag: " +  userTags[CORSAIR_TYPE] + '\n' +
 				"	- Server: " +  guildNames[CORSAIR_TYPE]) + 
 				'\n\n' +
-				'**• Shore Hold**: ' + !value[SHORE_TYPE] ? "Not detected :red_circle:" : ('\n' +
+				!value[SHORE_TYPE] ? '**• Corsair Stronghold**: Not detected :red_circle:' : (
+					'**• Corsair Stronghold**: Not detected :red_circle:' + '\n' +
 				"	- Status: " + "Popping :green_circle:" + '\n' +
 				"	- Username: " +  userNames[SHORE_TYPE] + '\n' +
 				"	- Usertag: " +  userTags[SHORE_TYPE] + '\n' +
 				"	- Server: " +  guildNames[SHORE_TYPE]) + 
 				'\n\n' +
-				'**• Gridiron**: ' + !value[GRIDIRON_TYPE] ? "Not detected :red_circle:" : ('\n' +
+				!value[GRIDIRON_TYPE] ? '**• Corsair Stronghold**: Not detected :red_circle:' : (
+					'**• Corsair Stronghold**: Not detected :red_circle:' + '\n' +
 				"	- Status: " + "Popping :green_circle:" + '\n' +
 				"	- Username: " +  userNames[GRIDIRON_TYPE] + '\n' +
 				"	- Usertag: " +  userTags[GRIDIRON_TYPE] + '\n' +
 				"	- Server: " +  guildNames[GRIDIRON_TYPE]) + 
 				'\n\n' +
-				'**• Champions Skyring**: ' + !value[SKYRING_TYPE] ? "Not detected :red_circle:" : ('\n' +
+				!value[SKYRING_TYPE] ? '**• Corsair Stronghold**: Not detected :red_circle:' : (
+					'**• Corsair Stronghold**: Not detected :red_circle:' + '\n' +
 				"	- Status: " + "Popping :green_circle:" + '\n' +
 				"	- Username: " +  userNames[SKYRING_TYPE] + '\n' +
 				"	- Usertag: " +  userTags[SKYRING_TYPE] + '\n' +
