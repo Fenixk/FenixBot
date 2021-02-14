@@ -183,28 +183,28 @@ module.exports = {
 				'**• Corsair Stronghold**:' + '\n' +
 				"	- Status: " + "Popping :green_circle:" + '\n' +
 				"	- Username: " +  userNames[CORSAIR_TYPE] + '\n' +
-				"	- Usertag: " +  userTags[CORSAIR_TYPE] + '\n' +
+				"	- User tag: " +  userTags[CORSAIR_TYPE] + '\n' +
 				"	- Server: " +  guildNames[CORSAIR_TYPE])) + 
 				'\n\n' +
 				(!value[SHORE_TYPE] ? '**• Shore Hold**: Not detected :red_circle:' : (
 					'**• Shore Hold**:' + '\n' +
 				"	- Status: " + "Popping :green_circle:" + '\n' +
 				"	- Username: " +  userNames[SHORE_TYPE] + '\n' +
-				"	- Usertag: " +  userTags[SHORE_TYPE] + '\n' +
+				"	- User tag: " +  userTags[SHORE_TYPE] + '\n' +
 				"	- Server: " +  guildNames[SHORE_TYPE])) + 
 				'\n\n' +
 				(!value[GRIDIRON_TYPE] ? '**• Gridiron**: Not detected :red_circle:' : (
 					'**• Gridiron**:' + '\n' +
 				"	- Status: " + "Popping :green_circle:" + '\n' +
 				"	- Username: " +  userNames[GRIDIRON_TYPE] + '\n' +
-				"	- Usertag: " +  userTags[GRIDIRON_TYPE] + '\n' +
+				"	- User tag: " +  userTags[GRIDIRON_TYPE] + '\n' +
 				"	- Server: " +  guildNames[GRIDIRON_TYPE])) + 
 				'\n\n' +
 				(!value[SKYRING_TYPE] ? '**• Skyring**: Not detected :red_circle:' : (
 					'**• Skyring**:' + '\n' +
 				"	- Status: " + "Popping :green_circle:" + '\n' +
 				"	- Username: " +  userNames[SKYRING_TYPE] + '\n' +
-				"	- Usertag: " +  userTags[SKYRING_TYPE] + '\n' +
+				"	- User tag: " +  userTags[SKYRING_TYPE] + '\n' +
 				"	- Server: " +  guildNames[SKYRING_TYPE])) +
 				'\n\n' +
 				"Good bye ! :crossed_swords:"

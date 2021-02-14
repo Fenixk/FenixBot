@@ -28,13 +28,15 @@ Here are the commands Users can do :
 - `!status` : To have the current status of all battlegrounds.
 - `!jackpot` : To have the official jackpot schedule by Gameforge.
 - `!help` : To have the list of all available commands.
+- `!info` or `!detect`  : To have the full information of the automatic battleground detection.
 - `!troll` : To have funny reply by the bot.
 
 Here are the commands Administrators can do :
 
 - `!init #channel` : To change the channel where the Battleground notifications and Battleground status are sent.
 - `!lang fr/de/en/ru` : To change the bot message language and time zone.
-- `!bg-role @roleName` : To change the @here to @role inside the bot messages, default is @here.
+- `!bg-role @roleName` : To change the @here to @role inside the bot messages, default is @here. You can choose not to use role with "off".
+- `!bg-role off` : To remove the "@" ping from the message. The message is still sent but without @role notification.
 - `!notif on/off` : To enable or disabled battleground notifications on your server. Does not affect battleground status update.
 
 Here are the commands Organizers can do : 
@@ -47,9 +49,9 @@ Here are the commands Organizers can do :
 Bot permissions are really minimal. It does not require any adminitration permissions. It will not view channels if you don't add it on it.
 
 [MANDATORY] : 
-- Read Messages : Bot needs to read its own messages.
+- Read Messages : Bot needs to read its own messages to update or delete them.
 - Embed Links : Bot is using discord Embed message to create beautiful messages.
-- Read Message History : Bot needs to read its own messages.
+- Read Message History : Bot needs to read its own messages to update or delete them.
 - Send Messages : When initizalied, Bot needs to send the general status message. Then it needs to send notification messages. 
 
 [OPTIONAL] : 
@@ -64,4 +66,4 @@ Bot permissions are really minimal. It does not require any adminitration permis
 
 
 
-Made by Fenix#0262 contact me if you have any issue.
+Made by Fenix#0001 contact me if you have any issue.
