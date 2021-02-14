@@ -3,7 +3,7 @@ const { CORSAIR_TYPE, SHORE_TYPE, GRIDIRON_TYPE, SKYRING_TYPE, FRAYWIND_TYPE } =
 module.exports = {
 	name: 'detect',
 	description: 'Trigger the BGs automatic detection and send result to the author.',
-	aliases: ['detect', 'search', 'info'],
+	aliases: ['detect', 'search', 'info', 'information', 'detection'],
 	execute(client, message) {
 		let value = {
 			[CORSAIR_TYPE]: false,

@@ -6,7 +6,7 @@ module.exports = {
 	guildOnly: false,
 	roleOnly: false,
 	adminOnly: true,
-	aliases: ['bg-role'],
+	aliases: ['bg-role', 'bg-roles', 'bgRole', 'bgRoles'],
 	execute(client, message, bgType, args) {
 		let bgRole;
 		let role;

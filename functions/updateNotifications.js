@@ -29,9 +29,15 @@ const updateNotifications = (channel, bgType, language, color, updateTime, roleI
 				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === bgDescriptors[language][bgType].title) {
 					const announceEmbed = createEmbed(bgType, color, language, updateTime, userName);
 					const announceMessage = "Hello " + roleString + ", **__" + bgType.charAt(0).toUpperCase() + bgType.slice(1) + "__** is currently popping !" + userMessage;
-					botMessages.array()[i].edit(announceMessage, announceEmbed)
-					.then(res => console.log('Update Notification for ' + guildName))
-					.catch(err => console.log('Failed to edit Embed for updateNotifications in ' + guildName));
+					if (color === "green") {
+						botMessages.array()[i].edit(announceMessage, announceEmbed)
+						.then(res => console.log('Update Notification to ' + color + ' for ' + guildName))
+						.catch(err => console.log('Failed to edit Embed for updateNotifications in ' + guildName));
+					} else {
+						botMessages.array()[i].edit(announceEmbed)
+						.then(res => console.log('Update Notification to ' + color + ' for ' + guildName))
+						.catch(err => console.log('Failed to edit Embed for updateNotifications in ' + guildName));
+					}
 				}
 			}
 		}
