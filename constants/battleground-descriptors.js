@@ -51,7 +51,7 @@ const bgDescriptor = {
 		[CORSAIR_TYPE]: {
 			title: "Corsair Stronghold",
 			description: {
-				green: "Corsair Stronghold is currently popping ⚔️ !",
+				green: "Corsair Stronghold is popping ⚔️ !",
 				orange: "Unknown Status. Check with Tera PvP EU moderators !",
 				red: "Not popping."
 			},
@@ -60,7 +60,7 @@ const bgDescriptor = {
 		[SHORE_TYPE]: {
 			title: "Shore Hold",
 			description: {
-				green: "Shore Hold is currently popping 🌴 !",
+				green: "Shore Hold is popping 🌴 !",
 				orange: "Unknown Status. Check with Tera PvP EU moderators !",
 				red: "Not popping."
 			},
@@ -69,7 +69,7 @@ const bgDescriptor = {
 		[GRIDIRON_TYPE]: {
 			title: "Gridiron",
 			description: {
-				green: "Gridiron is currently popping ⚔️ !",
+				green: "Gridiron is popping ⚔️ !",
 				orange: "Unknown Status. Check with Tera PvP EU moderators !",
 				red: "Not popping."
 			},
@@ -78,7 +78,7 @@ const bgDescriptor = {
 		[SKYRING_TYPE]: {
 			title: "Champion's Skyring (Team)",
 			description: {
-				green: "Champion's Skyring (Team) is currently popping 👑 !",
+				green: "Champion's Skyring (Team) is popping 👑 !",
 				orange: "Unknown Status. Check with Tera PvP EU moderators !",
 				red: "Not popping."
 			},
@@ -87,7 +87,7 @@ const bgDescriptor = {
 		[FRAYWIND_TYPE]: {
 			title: "Fraywind Canyon",
 			description: {
-				green: "Fraywind Canyon is currently popping 🌋 !",
+				green: "Fraywind Canyon is popping 🌋 !",
 				orange: "Unknown Status. Check with Tera PvP EU moderators !",
 				red: "Not popping."
 			},
@@ -98,7 +98,7 @@ const bgDescriptor = {
 		[CORSAIR_TYPE]: {
 			title: "Fort des corsaires",
 			description: {
-				green: "Fort des corsaires est actuellement en cours ⚔️ !",
+				green: "Fort des corsaires est en cours ⚔️ !",
 				orange: "Status inconnu. Demander aux modérateurs sur Tera PvP EU !",
 				red: "Aucun en cours."
 			},
@@ -107,7 +107,7 @@ const bgDescriptor = {
 		[SHORE_TYPE]: {
 			title: "Territoire Côtier",
 			description: {
-				green: "Territoire côtier est actuellement en cours 🌴 !",
+				green: "Territoire côtier est en cours 🌴 !",
 				orange: "Status inconnu. Demander aux modérateurs sur Tera PvP EU !",
 				red: "Aucun en cours."
 			},
@@ -125,7 +125,7 @@ const bgDescriptor = {
 		[SKYRING_TYPE]: {
 			title: "Cercle Céleste des Champions",
 			description: {
-				green: "Cercle Céleste des Champions est actuellement en cours 👑 !",
+				green: "Cercle Céleste des Champions (Equipe) est en cours 👑 !",
 				orange: "Status inconnu. Demander aux modérateurs sur Tera PvP EU !",
 				red: "Aucun en cours."
 			},
@@ -134,7 +134,7 @@ const bgDescriptor = {
 		[FRAYWIND_TYPE]: {
 			title: "Gorge Venteguerre",
 			description: {
-				green: "Gorge Venteguerre est actuellement en cours 🌋 !",
+				green: "Gorge Venteguerre est en cours 🌋 !",
 				orange: "Status inconnu. Demander aux modérateurs sur Tera PvP EU !",
 				red: "Aucun en cours."
 			},
@@ -145,7 +145,7 @@ const bgDescriptor = {
 		[CORSAIR_TYPE]: {
 			title: "Твердыня корсаров",
 			description: {
-				green: "Твердыня корсаров запущена  ⚔️ !",
+				green: "Твердыня корсаров запущена ⚔️ !",
 				orange: "Неизвестный статус. Проверьте вместе с Tera PVP EU модераторами!",
 				red: "Не запущена."
 			},
@@ -172,7 +172,7 @@ const bgDescriptor = {
 		[SKYRING_TYPE]: {
 			title: "Небесная арена",
 			description: {
-				green: "Небесная арена запущена 👑 !",
+				green: "Небесная арена запущена (Команда) 👑 !",
 				orange: "Неизвестный статус. Проверьте вместе с Tera PVP EU модераторами!",
 				red: "Не запущена."
 			},
@@ -192,7 +192,7 @@ const bgDescriptor = {
 		[CORSAIR_TYPE]: {
 			title: "Korsarenfestung",
 			description: {
-				green: "Die Korsarenfestung wird momentan gespielt ⚔️ !",
+				green: "Die Korsarenfestung wird gespielt ⚔️ !",
 				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
 				red: "Momentan nicht gespielt."
 			},
@@ -201,7 +201,7 @@ const bgDescriptor = {
 		[SHORE_TYPE]: {
 			title: "Küstenterritorium",
 			description: {
-				green: "Küstenterritorium wird momentan gespielt 🌴 !",
+				green: "Küstenterritorium wird gespielt 🌴 !",
 				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
 				red: "Momentan nicht gespielt."
 			},
@@ -210,7 +210,7 @@ const bgDescriptor = {
 		[GRIDIRON_TYPE]: {
 			title: "Unterirdisches Schlachtfeld",
 			description: {
-				green: "Das Unterirdische Schlachtfeld wird momentan gespielt ⚔️ !",
+				green: "Das Unterirdische Schlachtfeld wird gespielt ⚔️ !",
 				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
 				red: "Momentan nicht gespielt."
 			},
@@ -219,7 +219,7 @@ const bgDescriptor = {
 		[SKYRING_TYPE]: {
 			title: "Himmelsring der Helden",
 			description: {
-				green: "Himmelsring der Helden wird momentan gespielt 👑 !",
+				green: "Himmelsring der Helden wird gespielt (Team) 👑 !",
 				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
 				red: "Momentan nicht gespielt."
 			},
@@ -228,7 +228,7 @@ const bgDescriptor = {
 		[FRAYWIND_TYPE]: {
 			title: "Canyon der Ehre",
 			description: {
-				green: "Canyon der Ehre wird momentan gespielt 🌋 !",
+				green: "Canyon der Ehre wird gespielt 🌋 !",
 				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
 				red: "Momentan nicht gespielt."
 			},

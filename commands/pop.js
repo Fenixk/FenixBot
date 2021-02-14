@@ -14,6 +14,7 @@ module.exports = {
 		if (!bgType) return message.reply('Missing argument. Please put the name of the bg you want to pop.'); 
 		if (userName === "Rhittar") return;
 		updateAllStatus(client, bgType, 'green');
+		console.log(userName);
 		updateAllNotifications(client, bgType, 'green', userName);
 		if (!isMessageDuringSleepHour()) sendAllNotifications(client, bgType, userName);
 		if (isMessageDuringSleepHour() && message) message.reply("ZzzZzZ, I'm sleeping between " + (sleepStartTime + UTC.eu) + "h00 and " + (sleepEndTime + UTC.eu) + "h00. However I'll update status. Good night.")

@@ -13,5 +13,6 @@
 	"frenchAliases": ["fr", "french", "français", "francais", "france"],
 	"englishAliases": ["en", "english", "us", "usa", "american", "england", "british"],
 	"russianAliases": ["ru", "russian", "russia", "русский", "Россия"],
-	"germanAliases": ["de", "deutsch", "german", "gr", "germany"]
+	"germanAliases": ["de", "deutsch", "german", "gr", "germany"],
+	"thanks": {"en": "Thanks", "de": "Danke", "fr": "Merci", "ru": "Спасибо"}
 }

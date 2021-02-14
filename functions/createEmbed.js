@@ -1,22 +1,29 @@
 const bgDescriptors = require('../constants/battleground-descriptors');
 const colors = require('../constants/colors');
 const { UTC } = require('../config.json');
+const { thanks } = require('../config.json');
 const Discord = require('discord.js');
 
-const createEmbed = (bgType, status, language, updateTime) => {
+const createEmbed = (bgType, status, language, updateTime, userName) => {
 	let timeString = translateDate(Date.now(), language);
 	const bg = bgDescriptors[bgType];
 	const bgLang = bgDescriptors[language][bgType];
+	let desc;
 
 	if (status === 'orange' && updateTime) {
 		timeString = translateDate(updateTime, language);
+	}
+
+	desc = bgLang.description[status];
+	if (status === 'green' && userName) {
+		desc = bgLang.description[status] + thanks[language] + userName + ' !';
 	}
 	
 	const Embed = new Discord.MessageEmbed()
 		.setColor(colors[status])
 		.setTitle(bgLang.title)
 		.setURL('https://discord.gg/UTuDSMk')
-		.setDescription(bgLang.description[status])
+		.setDescription(desc)
 		.setThumbnail(bg.image)
 		.addFields(
 			{ name: 'Status', value: ':' + status + '_circle:', inline: true },

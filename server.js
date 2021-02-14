@@ -84,10 +84,10 @@ setInterval(() => {
 				retry[bgType] = true;
 			}
 			else if (values[bgType]) {
-				console.log('Auto Detection: ' + bgType + ' is currently popping, sent by ' + userNames[bgType]);
+				// console.log('Auto Detection: ' + bgType + ' is currently popping, sent by ' + userNames[bgType]);
 			}		
 	})
-}, 2*60*1000);
+}, 1*60*1000);
 
 // When Bot is started.
 client.once('ready', () => {

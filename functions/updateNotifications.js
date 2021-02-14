@@ -1,7 +1,8 @@
 const createEmbed = require('../functions/createEmbed.js');
 const bgDescriptors = require('../constants/battleground-descriptors');
+const { thanks } = require('../config.json');
 
-const updateNotifications = (channel, bgType, language, color, updateTime, roleId, userName = '') => {
+const updateNotifications = (channel, bgType, language, color, updateTime, roleId, userName = '', guildName) => {
 	let botMessages;
 	let roleString;
 	let userMessage = '';
@@ -17,7 +18,7 @@ const updateNotifications = (channel, bgType, language, color, updateTime, roleI
 	}
 
 	if (userName !== ''){
-		userMessage = ' Thanks ' + userName + ' !';
+		userMessage =  thanks[language] + userName + ' !';
 	}
 	
 	channel.messages.fetch({ limit: 100 }).then(messages => {
@@ -26,9 +27,11 @@ const updateNotifications = (channel, bgType, language, color, updateTime, roleI
 			// Find the good Embed with status recap.
 			for (let i=0; i < botMessages.array().length; i++){
 				if (botMessages.array()[i].embeds[0] && botMessages.array()[i].embeds[0].title === bgDescriptors[language][bgType].title) {
-					const announceEmbed = createEmbed(bgType, color, language, updateTime);
+					const announceEmbed = createEmbed(bgType, color, language, updateTime, userName);
 					const announceMessage = "Hello " + roleString + ", **__" + bgType.charAt(0).toUpperCase() + bgType.slice(1) + "__** is currently popping !" + userMessage;
-					botMessages.array()[i].edit(announceMessage, announceEmbed);
+					botMessages.array()[i].edit(announceMessage, announceEmbed)
+					.then(res => console.log('Update Notification for ' + guildName))
+					.catch(err => console.log('Failed to edit Embed for updateNotifications in ' + guildName));
 				}
 			}
 		}

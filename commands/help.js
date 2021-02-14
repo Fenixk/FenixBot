@@ -12,6 +12,7 @@ module.exports = {
 			"- **!status** : To have the current status of all battlegrounds.\n" +
 			"- **!jackpot** : To have the official jackpot schedule by Gameforge.\n" +
 			"- **!help** : To have the list of all available commands.\n" +
+			"- **!info** : To have the result of the auto detection for Battleground in your private message.\n" +
 			"- **!troll** : To have funny reply by the bot.\n\n" +
 			"Here are the commands Administrators can do : \n\n" +
 			"- **!init _#MyChannelName_** : To change the channel where the Battleground notifications and Battleground status are sent.\n" +
