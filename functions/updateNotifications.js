@@ -18,7 +18,7 @@ const updateNotifications = (channel, bgType, language, color, updateTime, roleI
 	}
 
 	if (userName !== ''){
-		userMessage =  thanks[language] + userName + ' !';
+		userMessage =  " " + thanks[language] + " " + userName + ' !';
 	}
 	
 	channel.messages.fetch({ limit: 100 }).then(messages => {

@@ -16,7 +16,7 @@ const createEmbed = (bgType, status, language, updateTime, userName) => {
 
 	desc = bgLang.description[status];
 	if (status === 'green' && userName) {
-		desc = bgLang.description[status] + thanks[language] + userName + ' !';
+		desc = bgLang.description[status] + " " + thanks[language] + " " + userName + ' !';
 	}
 	
 	const Embed = new Discord.MessageEmbed()

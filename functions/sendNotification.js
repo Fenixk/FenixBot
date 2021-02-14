@@ -23,7 +23,7 @@ const sendNotification = (channel, bgType, guild, language, roleId, userName = '
 	}
 
 	if (userName !== ''){
-		userMessage =  thanks[language] + userName + ' !';
+		userMessage =  " " + thanks[language] + " " + userName + ' !';
 	}
 
 	const announceEmbed = createEmbed(bgType, 'green', language, null, userName);
