@@ -12,6 +12,9 @@ const createEmbedCompact = (status, language) => {
 		.setDescription(state.description)
 		.setThumbnail('https://i.ibb.co/qWcw4yn/Tera-Online.png')
 		.addFields(
+			{ name: state.battleground, value: state.fraywind, inline: true },
+			{ name: state.status, value: ':' + status[FRAYWIND_TYPE] + '_circle:', inline: true },
+			{ name: state.last, value: translateDate(status['last' + FRAYWIND_TYPE], language), inline: true },
 			{ name: state.battleground, value: state.corsair, inline: true },
 			{ name: state.status, value: ':' + status[CORSAIR_TYPE] + '_circle:', inline: true },
 			{ name: state.last, value: translateDate(status['last' + CORSAIR_TYPE], language), inline: true },
