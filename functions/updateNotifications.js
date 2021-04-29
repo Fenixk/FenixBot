@@ -31,11 +31,11 @@ const updateNotifications = (channel, bgType, language, color, updateTime, roleI
 					const announceMessage = "Hello " + roleString + ", **__" + bgType.charAt(0).toUpperCase() + bgType.slice(1) + "__** is currently popping !" + userMessage;
 					if (color === "green") {
 						botMessages.array()[i].edit(announceMessage, announceEmbed)
-						.then(res => console.log('Update Notification to ' + color + ' for ' + guildName))
+						.then()
 						.catch(err => console.log('Failed to edit Embed for updateNotifications in ' + guildName));
 					} else {
 						botMessages.array()[i].edit(announceEmbed)
-						.then(res => console.log('Update Notification to ' + color + ' for ' + guildName))
+						.then()
 						.catch(err => console.log('Failed to edit Embed for updateNotifications in ' + guildName));
 					}
 				}

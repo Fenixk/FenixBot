@@ -1,7 +1,6 @@
 const bgDescriptors = require('../constants/battleground-descriptors');
 const colors = require('../constants/colors');
 const { UTC } = require('../config.json');
-const { thanks } = require('../config.json');
 const Discord = require('discord.js');
 
 const createEmbed = (bgType, status, language, updateTime, userName) => {
@@ -15,9 +14,6 @@ const createEmbed = (bgType, status, language, updateTime, userName) => {
 	}
 
 	desc = bgLang.description[status];
-	//if (status === 'green' && userName) {
-	//	desc = bgLang.description[status] + " " + thanks[language] + " " + userName + ' !';
-	//}
 	
 	const Embed = new Discord.MessageEmbed()
 		.setColor(colors[status])

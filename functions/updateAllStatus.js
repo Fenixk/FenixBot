@@ -3,6 +3,8 @@ const Status = require("../schemas/Status.schema.js");
 const Guilds = require('../schemas/Guilds.schema.js');
 
 const updateAllStatus = (client, bgType, statusType) => {
+	console.log('Update Status to ' + statusType + ' for ' + bgType);
+
 	// First Update Database.
 	Status.findOne({ id: "1" }).then(status => {
 		status[bgType] = statusType;

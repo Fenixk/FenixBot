@@ -16,7 +16,7 @@ const updateStatus = (channel, status, guild, language) => {
 				botMessages.array()[i].embeds[0].title === statusDescriptors.de.title )) {
 					const statusEmbed = createEmbedCompact(status, language);
 					botMessages.array()[i].edit(statusEmbed)
-					.then(res => console.log('Update Status for ' + guild))
+					.then()
 					.catch(err => console.log('Failed to edit Embed for updateStatus in ' + guild));
 					exist = true;
 				}
