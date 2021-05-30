@@ -21,9 +21,6 @@ const createEmbedCompact = (status, language) => {
 			{ name: state.battleground, value: state.shore, inline: true },
 			{ name: state.status, value: ':' + status[SHORE_TYPE] + '_circle:', inline: true },
 			{ name: state.last, value: translateDate(status['last' + SHORE_TYPE], language), inline: true },
-			{ name: state.battleground, value: state.gridiron, inline: true },
-			{ name: state.status, value: ':' + status[GRIDIRON_TYPE] + '_circle:', inline: true },
-			{ name: state.last, value:translateDate(status['last' + GRIDIRON_TYPE], language), inline: true },
 			{ name: state.battleground, value: state.skyring, inline: true },
 			{ name: state.status, value: ':' + status[SKYRING_TYPE] + '_circle:', inline: true },
 			{ name: state.last, value: translateDate(status['last' + SKYRING_TYPE], language), inline: true }
