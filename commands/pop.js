@@ -23,5 +23,6 @@ module.exports = {
 
 const isMessageDuringSleepHour = () => {
 	const currentTime = new Date(Date.now()).getUTCHours();
+	if (currentTime + UTC.eu >= 25) return true;
 	return (currentTime >= (sleepStartTime + UTC.eu) && currentTime <= (sleepEndTime + UTC.eu));
 }
