@@ -18,7 +18,7 @@ const createEmbed = (bgType, status, language, updateTime, userName) => {
 	const Embed = new Discord.MessageEmbed()
 		.setColor(colors[status])
 		.setTitle(bgLang.title)
-		.setURL('https://discord.gg/UTuDSMk')
+		.setURL('https://discord.gg/menmastera')
 		.setDescription(desc)
 		.setThumbnail(bg.image)
 		.addFields(

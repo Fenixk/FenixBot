@@ -1,8 +1,8 @@
 const statusDescriptors = {
-	url: 'https://discord.gg/UTuDSMk',
+	url: 'https://discord.gg/menmastera',
 	en: {
 		title: 'Battleground Activity',
-		url: 'https://discord.gg/UTuDSMk',
+		url: 'https://discord.gg/menmastera',
 		description: 'What battlegrounds are currently popping ? Join the fight ⚔️ !',
 		footer: 'Battlegrounds focus on team based PvP fight and can be accessed in LFG.',
 		battleground: 'Battleground',
@@ -16,7 +16,7 @@ const statusDescriptors = {
 	},
 	fr: {
 		title: 'Activité des champs de bataille',
-		url: 'https://discord.gg/UTuDSMk',
+		url: 'https://discord.gg/menmastera',
 		description: 'Quels champ de batailles sont en cours ? Venez combattre ⚔️ !!',
 		footer: 'Les champs de batailles sont des instances PvP focalisé sur les combats.',
 		battleground: 'Champ de bataille',
@@ -30,7 +30,7 @@ const statusDescriptors = {
 	},
 	ru: {
 		title: 'Активность арен',
-		url: 'https://discord.gg/UTuDSMk',
+		url: 'https://discord.gg/menmastera',
 		description: 'Какие арены в данный момент активны? Присоединяйтесь ⚔️!',
 		footer: 'Арены ориентированы на командные бои, можно через лфг.',
 		battleground: 'Арена',
@@ -44,7 +44,7 @@ const statusDescriptors = {
 	},
 	de: {
 		title: 'Schlachtgruppen Aktivität',
-		url: 'https://discord.gg/UTuDSMk',
+		url: 'https://discord.gg/menmastera',
 		description: 'Welche Schlachtgruppen werden gespielt? Tritt dem Kampf bei ⚔️',
 		footer: 'Schlachtgruppen fokusieren sich auf teambasierte PvP Kämpfe.',
 		battleground: 'Schlachtgruppe',

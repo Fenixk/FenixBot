@@ -7,7 +7,7 @@ module.exports = {
 			"Hello, I'm **Fenix Bot** ! To start using me, please use `!init #channel`. I have 2 main utilities :	\n\n" + 
 			"• Update battleground's status\n" +
 			"• Make a notification when battlegrounds are popping !\n\n" +
-			"You can join Menma Tera here : https://discord.gg/UTuDSMk\n\n" +
+			"You can join Menma Tera here : https://discord.gg/menmastera\n\n" +
 			"Here are the commands Users can do : \n\n" +
 			"- **!status** : To have the current status of all battlegrounds.\n" +
 			"- **!jackpot** : To have the official jackpot schedule.\n" +

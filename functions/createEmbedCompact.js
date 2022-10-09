@@ -8,7 +8,7 @@ const createEmbedCompact = (status, language) => {
 	const Embed = new Discord.MessageEmbed()
 		.setColor('#e6e6e6')
 		.setTitle(state.title)
-		.setURL('https://discord.gg/UTuDSMk')
+		.setURL('https://discord.gg/menmastera')
 		.setDescription(state.description)
 		.setThumbnail('https://i.ibb.co/qWcw4yn/Tera-Online.png')
 		.addFields(
