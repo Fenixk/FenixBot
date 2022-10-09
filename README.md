@@ -66,4 +66,4 @@ Bot permissions are really minimal. It does not require any adminitration permis
 
 
 
-Made by Fenix#0001 contact me if you have any issue.
+Made by Fenix#6582 contact me if you have any issue.
