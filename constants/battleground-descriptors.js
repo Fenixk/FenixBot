@@ -52,7 +52,7 @@ const bgDescriptor = {
 			title: "Corsair Stronghold",
 			description: {
 				green: "Corsair Stronghold is popping ⚔️ !",
-				orange: "Unknown Status. Check with Tera PvP EU moderators !",
+				orange: "Unknown Status. Check with Menma Tera moderators !",
 				red: "Not popping."
 			},
 			footer: "Corsair' Stronghold is a PvP instance where people fight in 20vs20 !"
@@ -61,7 +61,7 @@ const bgDescriptor = {
 			title: "Shore Hold",
 			description: {
 				green: "Shore Hold is popping 🌴 !",
-				orange: "Unknown Status. Check with Tera PvP EU moderators !",
+				orange: "Unknown Status. Check with Menma Tera moderators !",
 				red: "Not popping."
 			},
 			footer: "Shore Hold is a PvP instance where people fight in 7vs7 under the sun!"
@@ -70,7 +70,7 @@ const bgDescriptor = {
 			title: "Gridiron",
 			description: {
 				green: "Gridiron is popping ⚔️ !",
-				orange: "Unknown Status. Check with Tera PvP EU moderators !",
+				orange: "Unknown Status. Check with Menma Tera moderators !",
 				red: "Not popping."
 			},
 			footer: "Gridiron is a PvP instance where players fight hard in a 10v10 arena."
@@ -79,7 +79,7 @@ const bgDescriptor = {
 			title: "Champion's Skyring (Team)",
 			description: {
 				green: "Champion's Skyring (Team) is popping 👑 !",
-				orange: "Unknown Status. Check with Tera PvP EU moderators !",
+				orange: "Unknown Status. Check with Menma Tera moderators !",
 				red: "Not popping."
 			},
 			footer: "Champion' Skyring is a PvP instance where the best fight happens !!"
@@ -88,7 +88,7 @@ const bgDescriptor = {
 			title: "Fraywind Canyon",
 			description: {
 				green: "Fraywind Canyon is popping 🌋 !",
-				orange: "Unknown Status. Check with Tera PvP EU moderators !",
+				orange: "Unknown Status. Check with Menma Tera moderators !",
 				red: "Not popping."
 			},
 			footer: "Fraywind Canyon is a PvP instance where players fight for pyres !!"
@@ -99,7 +99,7 @@ const bgDescriptor = {
 			title: "Fort des corsaires",
 			description: {
 				green: "Fort des corsaires est en cours ⚔️ !",
-				orange: "Status inconnu. Demander aux modérateurs sur Tera PvP EU !",
+				orange: "Status inconnu. Demander aux modérateurs sur Menma Tera !",
 				red: "Aucun en cours."
 			},
 			footer: "Fort des corsaires est une instance PvP où 20 joueurs s'affrontent !"
@@ -108,7 +108,7 @@ const bgDescriptor = {
 			title: "Territoire Côtier",
 			description: {
 				green: "Territoire côtier est en cours 🌴 !",
-				orange: "Status inconnu. Demander aux modérateurs sur Tera PvP EU !",
+				orange: "Status inconnu. Demander aux modérateurs sur Menma Tera !",
 				red: "Aucun en cours."
 			},
 			footer: "Territoire côtier est une instance PvP où 7 joueurs PvP s'affrontent !"
@@ -117,7 +117,7 @@ const bgDescriptor = {
 			title: "Gridiron",
 			description: {
 				green: "Champ de bataille souterrain est en cours ⚔️ !",
-				orange: "Status inconnu. Demander aux modérateurs sur Tera PvP EU !",
+				orange: "Status inconnu. Demander aux modérateurs sur Menma Tera !",
 				red: "Aucun en cours."
 			},
 			footer: "Champ de bataille souterrain voit s'affronter 10 joueurs face à face."
@@ -126,7 +126,7 @@ const bgDescriptor = {
 			title: "Cercle Céleste des Champions",
 			description: {
 				green: "Cercle Céleste des Champions (Equipe) est en cours 👑 !",
-				orange: "Status inconnu. Demander aux modérateurs sur Tera PvP EU !",
+				orange: "Status inconnu. Demander aux modérateurs sur Menma Tera !",
 				red: "Aucun en cours."
 			},
 			footer: "Cercle Céleste des Champions est une instance PvP de haut niveau !!"
@@ -135,7 +135,7 @@ const bgDescriptor = {
 			title: "Gorge Venteguerre",
 			description: {
 				green: "Gorge Venteguerre est en cours 🌋 !",
-				orange: "Status inconnu. Demander aux modérateurs sur Tera PvP EU !",
+				orange: "Status inconnu. Demander aux modérateurs sur Menma Tera !",
 				red: "Aucun en cours."
 			},
 			footer: "Gorge Venteguerre est une instance PvP où 15 joueurs s'affrontent !!"
@@ -193,7 +193,7 @@ const bgDescriptor = {
 			title: "Korsarenfestung",
 			description: {
 				green: "Die Korsarenfestung wird gespielt ⚔️ !",
-				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
+				orange: "Unbekannter Status. Fragen Sie bei den Menma Tera Moderatoren nach !",
 				red: "Momentan nicht gespielt."
 			},
 			footer: "Die Korsarenfestung ist eine Pvp Instanz in der man 20vs20 kämpft !"
@@ -202,7 +202,7 @@ const bgDescriptor = {
 			title: "Küstenterritorium",
 			description: {
 				green: "Küstenterritorium wird gespielt 🌴 !",
-				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
+				orange: "Unbekannter Status. Fragen Sie bei den Menma Tera Moderatoren nach !",
 				red: "Momentan nicht gespielt."
 			},
 			footer: "Das Küstenterritorium ist eine 7vs7 PvP Instanz in der Sonne !!!"
@@ -211,7 +211,7 @@ const bgDescriptor = {
 			title: "Unterirdisches Schlachtfeld",
 			description: {
 				green: "Das Unterirdische Schlachtfeld wird gespielt ⚔️ !",
-				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
+				orange: "Unbekannter Status. Fragen Sie bei den Menma Tera Moderatoren nach !",
 				red: "Momentan nicht gespielt."
 			},
 			footer: "Das Unterirdische Schlachtfeld ist eine 10vs10, stark auf PvP basierende."
@@ -220,7 +220,7 @@ const bgDescriptor = {
 			title: "Himmelsring der Helden",
 			description: {
 				green: "Himmelsring der Helden wird gespielt (Team) 👑 !",
-				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
+				orange: "Unbekannter Status. Fragen Sie bei den Menma Tera Moderatoren nach !",
 				red: "Momentan nicht gespielt."
 			},
 			footer: "Im Himmelsring der Helden finden die besten PvP Kämpfe statt !"
@@ -229,7 +229,7 @@ const bgDescriptor = {
 			title: "Canyon der Ehre",
 			description: {
 				green: "Canyon der Ehre wird gespielt 🌋 !",
-				orange: "Unbekannter Status. Fragen Sie bei den Tera PvP EU Moderatoren nach !",
+				orange: "Unbekannter Status. Fragen Sie bei den Menma Tera Moderatoren nach !",
 				red: "Momentan nicht gespielt."
 			},
 			footer: "Im Canyon der Ehre kämpfen die Spieler um Punkte !! "

@@ -7,7 +7,7 @@ module.exports = {
 			"Hello, I'm **Fenix Bot** ! To start using me, please use `!init #channel`. I have 2 main utilities :	\n\n" + 
 			"• Update battleground's status\n" +
 			"• Make a notification when battlegrounds are popping !\n\n" +
-			"You can join Tera PvP EU here : https://discord.gg/UTuDSMk\n\n" +
+			"You can join Menma Tera here : https://discord.gg/UTuDSMk\n\n" +
 			"Here are the commands Users can do : \n\n" +
 			"- **!status** : To have the current status of all battlegrounds.\n" +
 			"- **!jackpot** : To have the official jackpot schedule.\n" +
@@ -25,8 +25,8 @@ module.exports = {
 			"- **!cancel _bgName_** : To remove Battleground announcement for all servers.\n\n" +
 			"List of all availaible **bgName**: corsair-stronghold, coco, corsair, cs, shore-hold, shore, sh, gridiron, gridi, gr, champion-skyring, skyring, 3v3, 3s.\n\n" +
 			"**Restrictions:**\n" +
-			"• Only members with 'Organizers' role from Tera PvP EU discords are authorized to make announcement.\n" +
-			"• Organizer commands work only on 'Tera PvP EU' discord'.\n" +
+			"• Only members with 'Organizers' role from Menma Tera discords are authorized to make announcement.\n" +
+			"• Organizer commands work only on 'Menma Tera' discord'.\n" +
 			"• Multiple notifications for the same battleground is not possible.\n" +
 			"• Battleground Notifications work only between 12h00 - 01h00.\n\n" +
 			"Contact Fenix#0001 if you have questions";

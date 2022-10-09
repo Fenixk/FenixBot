@@ -113,7 +113,7 @@ client.on('message', message => {
 		const bgType = getBattlegroundType(message, args[0]);
 	
 		if (!command) return;
-		if (command.guildOnly && !(message.guild.id === discordId)) return message.reply('You have to be on the discord Tera PvP EU to use this command.');
+		if (command.guildOnly && !(message.guild.id === discordId || message.guild.id == '410513968365436933')) return message.reply('You have to be on the Menma\'s Tera discord to use this command.');
 		if (command.roleOnly && !(message.member.roles.cache.some(x => allowedRoles.includes(x.name)))) return message.reply('You have to be an Organizer to use this command.');
 		if (command.adminOnly && !(message.member.hasPermission('ADMINISTRATOR'))) return message.reply('You have to be Administrator to use the command.');
 		if (command.args && !args.length) {

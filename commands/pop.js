@@ -12,7 +12,6 @@ module.exports = {
 	aliases: ['pop'],
 	execute(client, message, bgType, userName) {
 		if (!bgType) return message.reply('Missing argument. Please put the name of the bg you want to pop.'); 
-		if (userName === "Rhittar") return;
 		updateAllStatus(client, bgType, 'green');
 		console.log(userName);
 		updateAllNotifications(client, bgType, 'green', userName);

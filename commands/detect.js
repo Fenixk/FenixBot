@@ -36,7 +36,6 @@ module.exports = {
 			[SKYRING_TYPE]: '',
 			[FRAYWIND_TYPE]: ''		
 		};	
-		let isEUServer = false;
 
 		// Search inside all presences of all the guilds with the bot.
 		client.guilds.cache.forEach((guild) => {
@@ -44,11 +43,6 @@ module.exports = {
 			guild.presences.cache.array().forEach(presence => {
 				if (presence.activities.length > 0 && presence.activities[0].name === "TERA" && presence.activities[0].assets && presence.activities[0].assets.largeText){
 					let activityMessage = presence.activities[0].assets.largeText;
-
-					isEUServer = activityMessage.includes("EU") || activityMessage.includes("RU");
-					if (!isEUServer) {
-						return;
-					}
 
 					if (activityMessage.includes("Твердыня корсаров")) {
 						value[CORSAIR_TYPE] = true;
