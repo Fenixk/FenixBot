@@ -4,7 +4,7 @@
 	"sleepStartTime": 0,
 	"sleepEndTime": 9,
 	"serverName": ["Seren", "Mystel", "Yurian", "Shakan"],
-	"allowedRoles": ["Organizer", "Organizers", "Mod", "Mods", "Admin", "Co-Admin"],
+	"allowedRoles": ["Organizer", "Organizers", "Mod", "Mods", "Admin", "Co-Admin", "Event", "Manager", "Community Manager", "Announce"],
 	"corsairAliases": ["corsair", "cs", "coco", "corsair-stronghold"],
 	"shoreAliases": ["shore", "sh", "shore-hold"],
 	"gridironAliases": ["gridiron", "gridi", "battle arena", "gr"],

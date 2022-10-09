@@ -111,10 +111,13 @@ client.on('message', message => {
 		const commandName = args.shift().toLowerCase();
 		const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 		const bgType = getBattlegroundType(message, args[0]);
+		const matches = (arr, value) => arr.filter(function(pattern) {
+			return new RegExp(pattern).test(value);
+		});
 	
 		if (!command) return;
 		if (command.guildOnly && !(message.guild.id === discordId || message.guild.id == '410513968365436933')) return message.reply('You have to be on the Menma\'s Tera discord to use this command.');
-		if (command.roleOnly && !(message.member.roles.cache.some(x => allowedRoles.includes(x.name)))) return message.reply('You have to be an Organizer to use this command.');
+		if (command.roleOnly && !(message.member.roles.cache.some(x => matches(allowedRoles, x.name).length > 0))) return message.reply('You have to be an Organizer to use this command.');
 		if (command.adminOnly && !(message.member.hasPermission('ADMINISTRATOR'))) return message.reply('You have to be Administrator to use the command.');
 		if (command.args && !args.length) {
 			let reply = `You didn't provide any arguments, ${message.author}!`;
